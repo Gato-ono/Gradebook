@@ -1,4 +1,4 @@
-* { box-sizing: border-box; }
+*{ box-sizing:border-box; }
 
 body{
   margin:0;
@@ -7,20 +7,43 @@ body{
   color:#222;
 }
 
-/* =========================
-   TABLE
-========================= */
+.page{
+  max-width:1200px;
+  margin:12px auto;
+  background:#fff;
+  padding:12px;
+}
+
+h1{
+  font-size:20px;
+  margin:0 0 12px;
+}
+
+.section-title{
+  font-size:16px;
+  font-weight:bold;
+  margin:16px 0 10px;
+}
+
+:root{
+  --q3-strong:#FFFF81; /* fuerte */
+  --q3-soft:#FFFFA9;   /* suave */
+  --zebra:#EAEDF6;     /* azulito exacto */
+  --grid:#C9D3DF;
+  --head:#F1F3F6;
+}
+
 .grades{
   width:100%;
-  border-collapse: separate;
+  border-collapse:separate;
   border-spacing:0;
   font-size:13px;
 }
 
 .grades thead th{
-  background:#F1F3F6;
-  border:1px solid #C9D3DF;
-  padding:7px;
+  background:var(--head);
+  border:1px solid var(--grid);
+  padding:7px 8px;
   font-weight:bold;
   text-align:center;
 }
@@ -30,44 +53,31 @@ body{
 }
 
 .grades tbody td{
-  border:1px solid #C9D3DF;
+  border:1px solid var(--grid);
   padding:8px;
   vertical-align:middle;
 }
 
-/* ZEBRA (azulito exacto) */
-.grades tbody tr:nth-child(odd) td{ background:#EAEDF6; }
-.grades tbody tr:nth-child(even) td{ background:#FFFFFF; }
+/* Zebra */
+.grades tbody tr:nth-child(odd) td{ background:var(--zebra); }
+.grades tbody tr:nth-child(even) td{ background:#fff; }
 
-/* WIDTHS */
+/* widths */
 .grades th:first-child,
 .grades td:first-child{ width:48%; text-align:left; }
 
 .grades th:not(:first-child),
 .grades td:not(:first-child){ width:13%; text-align:center; }
 
-/* TEXT */
+/* text */
 .blue{ color:#1B5FA8; font-weight:bold; }
 .small{ font-size:11px; color:#5B6A78; }
 
-:root{
-  --q3-strong:#FFFF81; /* fuerte */
-  --q3-soft:#FFFFA9;   /* suave (por si lo usas) */
-}
+/* Q3 header */
+.grades thead th.q3h{ background:var(--q3-strong); }
 
-/* Header Q3 (cuadrito chiquito) */
-.grades thead th.q3h{ background: var(--q3-strong); }
-
-/* IMPORTANTE:
-   Q3 SIEMPRE sobreescribe el zebra
-*/
-.grades td.q3{ background: inherit; } /* base */
-
-/* fuertes */
-.grades td.q3.q3-strong{ background: var(--q3-strong) !important; }
-
-/* suaves (si luego quieres) */
-.grades td.q3.q3-soft{ background: var(--q3-soft) !important; }
-
-/* blancos */
-.grades td.q3.q3-none{ background:#FFFFFF !important; }
+/* Q3 overrides zebra */
+.grades td.q3{ background:inherit; }
+.grades td.q3.q3-strong{ background:var(--q3-strong) !important; }
+.grades td.q3.q3-soft{ background:var(--q3-soft) !important; }
+.grades td.q3.q3-none{ background:#fff !important; }
