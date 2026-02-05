@@ -131,9 +131,9 @@ h1{
    Q3 COLORS (GANAN AL ZEBRA)
 ========================= */
 
-/* header Q3: suave */
+/* header Q3: strong*/
 .grades thead th.q3h{
-  background:var(--q3-soft) !important;
+  background:var(--q3-strong) !important;
 }
 
 /* base */
