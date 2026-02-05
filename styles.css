@@ -1,216 +1,64 @@
-/* ===== RESET ===== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* ===== TABLA GRADEBOOK (CLON REAL) ===== */
 
-body {
-  background: #eef1f4;
-  color: #222;
-}
-
-/* ===== TOP BAR ===== */
-.topbar {
-  background: #dfe7ef;
-  border-bottom: 1px solid #c7d3df;
-}
-
-.wrap {
-  width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 10px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.avatar {
-  background: #5a6f86;
-  color: white;
-  font-weight: bold;
-  padding: 6px 8px;
-  border-radius: 2px;
-  font-size: 12px;
-}
-
-.brand-sub {
-  font-size: 11px;
-  color: #555;
-}
-
-.brand-name {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.menu a {
-  font-size: 12px;
-  margin-left: 12px;
-  color: #1c5fa8;
-  text-decoration: none;
-}
-
-.menu a.exit {
-  font-weight: bold;
-}
-
-/* ===== CONTAINER ===== */
-.container {
-  width: 1200px;
-  margin: 16px auto;
-}
-
-h1 {
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-/* ===== PANELS ===== */
-.panel {
-  background: white;
-  border: 1px solid #cfd8e2;
-  margin-bottom: 14px;
-}
-
-.panelhead {
-  display: flex;
-  justify-content: space-between;
-  padding: 6px 10px;
-  background: #f3f6f9;
-  border-bottom: 1px solid #cfd8e2;
-}
-
-.paneltitle {
-  font-weight: bold;
-}
-
-.paneltitle.red {
-  color: #c00;
-}
-
-.panelbody {
-  padding: 10px;
-  font-size: 13px;
-}
-
-.red {
-  color: #c00;
-}
-
-.missitem {
-  margin-top: 6px;
-}
-
-.missitem a {
-  color: #1c5fa8;
-  text-decoration: none;
-}
-
-.due {
-  color: #777;
-  margin-right: 6px;
-}
-
-/* ===== CLASS GRADES HEADER ===== */
-.gradehead {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
-}
-
-.gradehead h2 {
-  font-size: 18px;
-}
-
-.subbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 6px 10px;
-  font-size: 12px;
-}
-
-.links a {
-  color: #1c5fa8;
-  text-decoration: none;
-}
-
-.note {
-  color: #555;
-  text-align: right;
-}
-
-/* ===== TABLE ===== */
 .grades {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
   font-size: 13px;
 }
 
-.grades th {
-  background: #f1f3f6;
-  border: 1px solid #cfd8e2;
-  padding: 6px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.classcol {
-  width: 52%;
-  text-align: left;
-}
-
-/* ===== Q3 HEADER ===== */
-.grades th.q3h {
-  background: #fff59a;
-}
-
-/* ===== CELLS ===== */
+/* Bordes EXACTOS */
+.grades th,
 .grades td {
-  border: 1px solid #cfd8e2;
-  padding: 6px;
-  vertical-align: top;
+  border: 1px solid #C7D2DE;
+  padding: 6px 8px;
+  vertical-align: middle;
 }
 
-/* ===== PERFECT BLUE ROWS (1,3,5,7...) ===== */
-.grades tbody tr:nth-child(odd) td {
-  background: #edf3fb;   /* EXACT azul grisáceo */
-}
-
-/* ===== EVEN ROWS ===== */
-.grades tbody tr:nth-child(even) td {
-  background: #ffffff;
-}
-
-/* ===== Q3 COLUMN ===== */
-.grades td.q3 {
-  background: #fff59a !important;
-}
-
-/* ===== BLUE GRADES ===== */
-.blue {
-  color: #1c5fa8;
+/* Header */
+.grades thead th {
+  background: #F1F4F8;
   font-weight: bold;
+  text-align: center;
 }
 
-/* ===== SMALL TEXT ===== */
-.small {
-  font-size: 11px;
-  color: #555;
+/* Zebra REAL (filas 1,3,5...) */
+.grades tbody tr:nth-child(odd) td {
+  background-color: #E8F0FB;
 }
 
-/* ===== PRINT ===== */
-@media print {
-  body {
-    background: white;
-  }
+/* Filas pares blancas */
+.grades tbody tr:nth-child(even) td {
+  background-color: #FFFFFF;
+}
+
+/* Columna Q3 amarilla SIEMPRE */
+.grades td.q3,
+.grades th.q3 {
+  background-color: #FFF59A !important;
+}
+
+/* Texto azul como el original */
+.grades a,
+.grades .grade {
+  color: #1F5FA6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Alinear columnas Q */
+.grades td:not(:first-child),
+.grades th:not(:first-child) {
+  text-align: center;
+  width: 80px;
+}
+
+/* Columna Class más ancha */
+.grades td:first-child,
+.grades th:first-child {
+  width: 45%;
+}
+
+/* Hover muy leve (opcional, igual al sistema) */
+.grades tbody tr:hover td {
+  background-color: #DEEAF8;
 }
