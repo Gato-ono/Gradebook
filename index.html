@@ -1,183 +1,240 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
+  <!-- Fuerza vista ancha tipo PC (no responsive móvil) -->
   <meta name="viewport" content="width=1200, initial-scale=1" />
-  <title>Gradebook (Mock)</title>
-  <style>
-    :root{
-      --bg: #e9eef3;
-      --panel: #ffffff;
-      --line: #d9dde3;
-      --soft-line:#e6e9ef;
-      --text: #1b1f24;
-      --muted:#586474;
-      --link:#1f6fd1;
-      --warn:#c0392b;
-      --q3:#fff3a3;
-      --rowAlt:#f8fafc;
-    }
+  <title>Gradebook</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
+<body>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">
+        <div class="avatar">SK</div>
+        <div class="brand-text">
+          <div class="brand-sub">Student Access</div>
+          <div class="brand-name">MARIANGEL</div>
+        </div>
+      </div>
 
-    /* Header bar (simple) */
-    .topbar{
-      background:#d7e0ea;
-      border-bottom:1px solid var(--line);
-      padding:10px 14px;
-    }
-    .topbar .wrap{
-      max-width: 980px;
-      margin:0 auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-weight:bold;
-      color:#7b0f14;
-    }
-    .brand .avatar{
-      width:34px;height:34px;
-      border-radius:6px;
-      background:#cfe0ff;
-      display:grid;
-      place-items:center;
-      font-weight:bold;
-      color:#1d2a44;
-      border:1px solid var(--line);
-    }
-    .nav a{
-      color: var(--link);
-      text-decoration:none;
-      margin-left:14px;
-      font-size:14px;
-      white-space:nowrap;
-    }
+      <nav class="nav">
+        <a href="#">My Account</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Email History</a>
+        <a class="exit" href="#">Exit</a>
+      </nav>
+    </div>
+  </header>
 
-    /* Layout */
-    .container{
-      max-width: 980px;
-      margin: 18px auto 30px;
-      padding: 0 12px;
-    }
-    h1{
-      margin: 10px 0 14px;
-      font-size: 40px;
-      font-weight: 800;
-      letter-spacing:-.5px;
-      color:#222;
-    }
+  <main class="container">
+    <h1>Gradebook</h1>
 
-    .panel{
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      overflow:hidden;
-      box-shadow: 0 1px 0 rgba(0,0,0,.03);
-      margin-bottom: 18px;
-    }
-    .panel .panel-head{
-      padding: 10px 12px;
-      border-bottom: 1px solid var(--soft-line);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      background: #fbfcfe;
-    }
-    .panel .panel-title{
-      font-weight: 800;
-      color: var(--warn);
-      font-size: 18px;
-    }
-    .panel .panel-actions a{
-      color: var(--link);
-      text-decoration:none;
-      font-weight:600;
-      font-size: 16px;
-    }
-    .panel .panel-body{
-      padding: 10px 12px 12px;
-    }
+    <!-- Missing Assignments -->
+    <section class="panel">
+      <div class="panel-head">
+        <div class="panel-title">Missing Assignments</div>
+        <div class="panel-actions"><a href="#">(Show All)</a></div>
+      </div>
 
-    /* Missing assignments block */
-    .miss-line{
-      color:#2a2f36;
-      margin: 2px 0 10px;
-      font-size: 14px;
-    }
-    .miss-item{
-      border: 1px solid var(--soft-line);
-      border-radius: 6px;
-      padding: 10px 10px;
-      background: #f7f9fc;
-      margin-bottom: 8px;
-      display:flex;
-      align-items:flex-start;
-      gap:10px;
-      font-size: 14px;
-    }
-    .miss-item .due{
-      color:#5d6a7a;
-      min-width: 140px;
-      white-space:nowrap;
-    }
-    .miss-item a{
-      color: var(--link);
-      text-decoration:none;
-      font-weight:700;
-    }
-    .miss-item .meta{
-      color:#5d6a7a;
-      font-weight:600;
-    }
+      <div class="panel-body">
+        <div class="miss-line"><b>MARIANGEL</b> has <b>10</b> missing assignments:</div>
 
-    /* Class grades header row */
-    .grades-header{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:12px;
-      padding: 12px;
-    }
-    .grades-header h2{
-      margin:0;
-      font-size: 30px;
-      font-weight:800;
-      color:#222;
-      display:flex;
-      align-items:center;
-      gap:8px;
-    }
-    .printer{
-      font-size: 18px;
-      opacity:.55;
-    }
+        <div class="miss-item">
+          <div class="due"><i>Due:</i> 02/04/2026</div>
+          <div class="miss-text">
+            <a href="#">Trading Card</a>, <b>US HISTORY</b> (Period 5) <span class="teacher">ANDERSON, C</span>
+          </div>
+        </div>
 
-    .grades-subbar{
-      border-top:1px solid var(--soft-line);
-      padding: 10px 12px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-    .student{
-      font-weight:700;
-      color:#2a2f36;
-    }
+        <div class="miss-item">
+          <div class="due"><i>Due:</i> 01/27/2026</div>
+          <div class="miss-text">
+            <a href="#">Firsthand Accounts of the Great Depression</a>, <b>US HISTORY</b> (Period 5) <span class="teacher">ANDERSON, C</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Class Grades -->
+    <section class="panel">
+      <div class="grades-header">
+        <h2>
+          Class Grades
+          <a class="print-link" href="javascript:window.print()" title="Print">🖨️</a>
+        </h2>
+      </div>
+
+      <div class="grades-subbar">
+        <div class="left">
+          <span class="student">MARIANGEL (COPPER HILLS HIGH)</span>
+          <span class="sub-actions">
+            <a href="#">Display Options</a> |
+            <a href="#">GPA</a>
+          </span>
+        </div>
+
+        <div class="note">
+          Grades posted to the report card are in <b>bold</b>.<br />
+          Current grades are highlighted.
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table aria-label="Class Grades">
+          <thead>
+            <tr>
+              <th class="col-class">Class</th>
+              <th class="col-q">Q1</th>
+              <th class="col-q">Q2</th>
+              <th class="col-q q3h">Q3</th>
+              <th class="col-q">Q4</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>
+                <div class="class-name"><span class="caret">▶</span> WOMEN'S WEIGHT TRAINING 1</div>
+                <div class="class-details">Period 1 (7:35 AM - 9:05 AM)</div>
+                <div class="class-details teacher">ANDERSON, K</div>
+              </td>
+              <td class="qcell"><b>B+</b></td>
+              <td class="qcell">A</td>
+              <td class="qcell q3"></td>
+              <td class="qcell"></td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="class-name"><span class="caret">▶</span> CARES - STUDENT ADVISORY</div>
+                <div class="class-details">Period 1 (7:35 AM - 9:05 AM)</div>
+                <div class="class-details teacher">KUHLMEIER, RACHEL</div>
+              </td>
+              <td class="qcell"></td>
+              <td class="qcell"></td>
+              <td class="qcell q3"></td>
+              <td class="qcell"></td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="class-name"><span class="caret">▶</span> LANGUAGE ARTS 11</div>
+                <div class="class-details">Period 2 (9:10 AM - 10:40 AM)</div>
+                <div class="class-details teacher">Cowart, Kimberly</div>
+              </td>
+              <td class="qcell"><b>D+</b></td>
+              <td class="qcell">D+</td>
+              <td class="qcell q3">A-</td>
+              <td class="qcell"></td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="class-name"><span class="caret">▶</span> ATTENDANCE AIDE</div>
+                <div class="class-details">Period 3 (10:45 AM - 12:50 PM)</div>
+                <div class="class-details teacher">KRISTIE MIDGLEY</div>
+              </td>
+              <td class="qcell">P</td>
+              <td class="qcell">P</td>
+              <td class="qcell q3"></td>
+              <td class="qcell"></td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="class-name"><span class="caret">▶</span> FINANCIAL LITERACY</div>
+                <div class="class-details">Period 3A (11:20 AM - 12:50 PM)</div>
+                <div class="class-details teacher">LYON, SHANE</div>
+              </td>
+              <td class="qcell"></td>
+              <td class="qcell"></td>
+              <td class="qcell q3"></td>
+              <td class="qcell"></td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="class-name"><span class="caret">▶</span> FUND VOLLEYBALL 1</div>
+                <div class="class-details">Period 4 (12:55 PM - 2:25 PM)</div>
+                <div class="class-details teacher">MOURA, EDDIE</div>
+              </td>
+              <td class="qcell"><b>A-</b></td>
+              <td class="qcell">A</td>
+              <td class="qcell q3"></td>
+              <td class="qcell"></td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="class-name"><span class="caret">▶</span> FUND VOLLEYBALL 2</div>
+                <div class="class-details">Period 4 (12:55 PM - 2:25 PM)</div>
+                <div class="class-details teacher">MOURA, EDDIE</div>
+              </td>
+              <td class="qcell"></td>
+              <td class="qcell"></td>
+              <td class="qcell q3">A</td>
+              <td class="qcell"></td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="class-name"><span class="caret">▶</span> US HISTORY</div>
+                <div class="class-details">Period 5 (7:35 AM - 9:05 AM)</div>
+                <div class="class-details teacher">ANDERSON, C</div>
+              </td>
+              <td class="qcell"><b>F</b></td>
+              <td class="qcell">F</td>
+              <td class="qcell q3">F</td>
+              <td class="qcell"></td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="class-name"><span class="caret">▶</span> SECONDARY MATH 3</div>
+                <div class="class-details">Period 6 (9:10 AM - 10:40 AM)</div>
+                <div class="class-details teacher">Mr. HILTON</div>
+              </td>
+              <td class="qcell"><b>D</b></td>
+              <td class="qcell">C-</td>
+              <td class="qcell q3">C-</td>
+              <td class="qcell"></td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="class-name"><span class="caret">▶</span> MED ANATOMY/PHYS</div>
+                <div class="class-details">Period 7A (11:20 AM - 12:50 PM)</div>
+                <div class="class-details teacher">Mrs. JENKINS</div>
+              </td>
+              <td class="qcell"><b>A-</b></td>
+              <td class="qcell">C+</td>
+              <td class="qcell q3">D-</td>
+              <td class="qcell"></td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="class-name"><span class="caret">▶</span> ENG LANG DEV LEVEL 2</div>
+                <div class="class-details">Period 8 (12:55 PM - 2:25 PM)</div>
+                <div class="class-details teacher">THOMAS, AMANDA</div>
+              </td>
+              <td class="qcell"><b>C-</b></td>
+              <td class="qcell">B</td>
+              <td class="qcell q3">A</td>
+              <td class="qcell"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+  </html>    }
     .sub-actions a{
       color: var(--link);
       text-decoration:none;
