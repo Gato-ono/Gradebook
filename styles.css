@@ -177,7 +177,26 @@ body{
   max-width: 100%;
 }
 
-/* alinear texto como portal */
+/* ===== Subbar estilo portal ===== */
+.grades-subbar{
+  display: inline-flex;              /* IMPORTANT: que no ocupe todo el ancho */
+  align-items: center;
+  gap: 14px;
+
+  background: #EEF2F6;
+  border: 1px solid #BFCAD6;
+  border-bottom: none;               /* se pega con la tabla */
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
+  padding: 6px 10px;
+  margin: 6px 0 0 0;                 /* pegado */
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* que quede a la izquierda como en el portal */
 .grades-subbar-left{
   display:flex;
   align-items:baseline;
@@ -186,7 +205,7 @@ body{
 }
 
 .gsb-name{ color:#222; }
-.gsb-school{ color:#5B6A78; }
+.gsb-school{ color:#222; font-weight: 700; }
 
 .grades-subbar-right{
   display:flex;
@@ -195,21 +214,23 @@ body{
   white-space:nowrap;
 }
 
-.gsb-link{
-  color: var(--link);
+/* LINKS: azules y SIN morado/subrayado */
+.gsb-link,
+.gsb-link:visited{
+  color:#1B5FA8;
   text-decoration:none;
   font-weight:700;
 }
 .gsb-link:hover{ text-decoration:underline; }
 
-.gsb-sep{ color:#5B6A78; }
+.gsb-sep{ color:#222; font-weight:700; }
 
-/* CLAVE: que la tabla se pegue sin “doble borde” */
+/* ===== Para que la tabla se pegue perfecto ===== */
 .grades{
   margin-top: 0;
 }
 
-/* si tu table header tiene border-top, quítalo para que no duplique */
+/* quita el borde-top del header para que NO se vea doble */
 .grades thead th{
   border-top: none;
 }
