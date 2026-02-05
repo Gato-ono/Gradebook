@@ -1,26 +1,224 @@
-/* ===== Q3 EXACTO POR FILA ===== */
-
-/* Header Q3 (cuadrito chiquito) amarillo fuerte */
-.grades thead th.q3h{
-  background: #FFE96A !important; /* intenso */
+/* =========================
+   RESET / BASE
+========================= */
+* {
+  box-sizing: border-box;
 }
 
-/* Por defecto Q3 NO es amarillo */
-.grades td.q3{
-  background: inherit !important;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #EEF2F6;
+  color: #222;
 }
 
-/* Amarillo intenso (0,3,5,7,9,11) */
-.grades td.q3.q3-strong{
-  background: #FFE96A !important;
+/* =========================
+   TOP BAR
+========================= */
+.topbar {
+  background: #D9E3EE;
+  border-bottom: 1px solid #BFCAD6;
 }
 
-/* Amarillo suave (2,8,10 por ejemplo) */
-.grades td.q3.q3-soft{
-  background: #FFF6B0 !important;
+.topbar .wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Blanco (fila 4,6) */
-.grades td.q3.q3-none{
-  background: #FFFFFF !important;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  background: #2B5F9E;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 6px;
+  border-radius: 3px;
+}
+
+.brand-text .brand-sub {
+  font-size: 11px;
+  color: #444;
+}
+
+.brand-text .brand-name {
+  font-size: 13px;
+  font-weight: bold;
+  color: #9B0000;
+}
+
+.top-links a {
+  font-size: 12px;
+  color: #1B5FA8;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* =========================
+   PAGE WRAP
+========================= */
+.page {
+  max-width: 1200px;
+  margin: 12px auto;
+  background: #fff;
+  padding: 12px;
+}
+
+/* =========================
+   TITLES
+========================= */
+h1 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 18px 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* =========================
+   MISSING ASSIGNMENTS
+========================= */
+.missing {
+  border: 1px solid #D3D3D3;
+  background: #F7F7F7;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.missing .title {
+  color: #C00000;
+  font-weight: bold;
+}
+
+.missing a {
+  color: #1B5FA8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* =========================
+   GRADES TABLE
+========================= */
+.grades {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13px;
+}
+
+/* HEADER */
+.grades thead th {
+  background: #EEF2F6;
+  border-top: 1px solid #BFCAD6;
+  border-bottom: 1px solid #BFCAD6;
+  border-right: 1px solid #C9D3DF;
+  padding: 7px 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.grades thead th:first-child {
+  border-left: 1px solid #BFCAD6;
+  text-align: left;
+}
+
+/* BODY CELLS */
+.grades tbody td {
+  border-right: 1px solid #C9D3DF;
+  border-bottom: 1px solid #C9D3DF;
+  padding: 8px;
+  vertical-align: middle;
+}
+
+.grades tbody td:first-child {
+  border-left: 1px solid #BFCAD6;
+}
+
+/* =========================
+   ZEBRA (AZUL EXACTO)
+   1,3,5,7...
+========================= */
+.grades tbody tr:nth-child(odd) td {
+  background: #EAF1FB;
+}
+
+.grades tbody tr:nth-child(even) td {
+  background: #FFFFFF;
+}
+
+/* =========================
+   COLUMN WIDTHS
+========================= */
+.grades th:first-child,
+.grades td:first-child {
+  width: 48%;
+  text-align: left;
+}
+
+.grades th:not(:first-child),
+.grades td:not(:first-child) {
+  width: 13%;
+  text-align: center;
+}
+
+/* =========================
+   TEXT STYLES
+========================= */
+.grades a {
+  color: #1B5FA8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.small {
+  font-size: 11px;
+  color: #5B6A78;
+}
+
+.blue {
+  color: #1B5FA8;
+  font-weight: bold;
+}
+
+/* =========================
+   Q3 LOGIC (EXACTA)
+========================= */
+
+/* Header Q3 (cuadro chiquito) */
+.grades thead th.q3h {
+  background: #FFE96A;
+}
+
+/* Q3 base: NO amarillo por defecto */
+.grades td.q3 {
+  background: inherit;
+}
+
+/* Amarillo fuerte (0,3,5,7,9,11) */
+.grades td.q3.q3-strong {
+  background: #FFE96A;
+}
+
+/* Amarillo suave (2,8,10) */
+.grades td.q3.q3-soft {
+  background: #FFF6B0;
+}
+
+/* Blanco (4,6) */
+.grades td.q3.q3-none {
+  background: #FFFFFF;
 }
