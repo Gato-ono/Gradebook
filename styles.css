@@ -143,3 +143,12 @@ h1{
 .grades td.q3.q3-strong{ background:var(--q3-strong) !important; }
 .grades td.q3.q3-soft{   background:var(--q3-soft)   !important; }
 .grades td.q3.q3-none{   background:#fff             !important; }
+
+/* ===== FORZAR MODO PC ===== */
+.page{
+  min-width: 1100px;
+}
+
+body{
+  overflow-x: auto;
+}
