@@ -1,44 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Gradebook</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css?v=6">
-</head>
-<body>
-
-<!-- TOP BAR -->
-<header class="topbar">
-  <div class="wrap">
-    <div class="brand">
-      <div class="avatar">SK</div>
-      <div class="brand-text">
-        <div class="brand-sub">Student Access</div>
-        <div class="brand-name">MARIANGEL</div>
-      </div>
-    </div>
-    <div class="top-links">
-      <a href="#">My Account</a>
-      <a href="#">Contact Us</a>
-      <a href="#">Email History</a>
-      <a href="#">Exit</a>
-    </div>
-  </div>
-</header>
-
-<div class="page">
-
-<h1>Gradebook</h1>
-
-<!-- MISSING -->
-<div class="missing">
-  <div class="title">Missing Assignments <a href="#">(Show All)</a></div>
-  <div>MARIANGEL has <b>10</b> missing assignments:</div>
-</div>
-
-<div class="section-title">Class Grades</div>
-
 <table class="grades">
   <thead>
     <tr>
@@ -51,11 +10,10 @@
   </thead>
 
   <tbody>
-
-    <!-- 0 STRONG -->
+    <!-- 1) SI (strong) -->
     <tr>
       <td>
-        <a href="#">WOMENS WEIGHT TRAINING 1</a><br>
+        <span class="blue">WOMEN'S WEIGHT TRAINING 1</span><br>
         <span class="small">Period 1 · ANDERSON, K</span>
       </td>
       <td class="blue">B+</td>
@@ -64,47 +22,46 @@
       <td></td>
     </tr>
 
-    <!-- 1 NORMAL -->
+    <!-- 2) NO (none) -->
     <tr>
       <td>
-        <a href="#">CARES - STUDENT ADVISORY</a><br>
+        <span class="blue">CARES - STUDENT ADVISORY</span><br>
         <span class="small">KUHLMEIER, RACHEL</span>
       </td>
       <td></td>
       <td></td>
-      <td class="q3"></td>
+      <td class="q3 q3-none"></td>
       <td></td>
     </tr>
 
-    <!-- 2 SOFT -->
+    <!-- 3) SI (strong) -->
     <tr>
       <td>
-        <a href="#">LANGUAGE ARTS 11</a><br>
+        <span class="blue">LANGUAGE ARTS 11</span><br>
         <span class="small">Cowart, Kimberly</span>
       </td>
-      <td class="blue">D+</td>
       <td>D+</td>
-      .q3-strong {
-  <td class="q3 q3-blue">F</td>
+      <td class="blue">D+</td>
+      <td class="q3 q3-strong">A-</td>
       <td></td>
     </tr>
 
-    <!-- 3 STRONG -->
+    <!-- 4) SI (strong) -->
     <tr>
       <td>
-        <a href="#">ATTENDANCE AIDE</a><br>
+        <span class="blue">ATTENDANCE AIDE</span><br>
         <span class="small">KRISTIE MIDGLEY</span>
       </td>
-      <td>P</td>
-      <td>P</td>
+      <td class="blue">P</td>
+      <td class="blue">P</td>
       <td class="q3 q3-strong"></td>
       <td></td>
     </tr>
 
-    <!-- 4 NONE -->
+    <!-- 5) NO (none) -->
     <tr>
       <td>
-        <a href="#">FINANCIAL LITERACY</a><br>
+        <span class="blue">FINANCIAL LITERACY</span><br>
         <span class="small">LYON, SHANE</span>
       </td>
       <td></td>
@@ -113,34 +70,46 @@
       <td></td>
     </tr>
 
-    <!-- 5 STRONG -->
+    <!-- 6) SI (strong) -->
     <tr>
       <td>
-        <a href="#">FUND VOLLEYBALL 1</a><br>
+        <span class="blue">FUND VOLLEYBALL 1</span><br>
         <span class="small">MOURA, EDDIE</span>
       </td>
-      <td class="blue">A-</td>
+      <td>A-</td>
       <td>A</td>
       <td class="q3 q3-strong"></td>
       <td></td>
     </tr>
 
-    <!-- 6 NONE -->
-    <tr>
-  <td>
-    <a href="#">US HISTORY</a><br>
-    <span class="small">ANDERSON, C</span>
-  </td>
-  <td class="blue">F</td>
-  <td>F</td>
-  <td class="q3 q3-none"></td>
-  <td></td>
-    </tr>
-
-    <!-- 7 STRONG -->
+    <!-- 7) NO (none) -->
     <tr>
       <td>
-        <a href="#">SECONDARY MATH 3</a><br>
+        <span class="blue">FUND VOLLEYBALL 2</span><br>
+        <span class="small">MOURA, EDDIE</span>
+      </td>
+      <td></td>
+      <td></td>
+      <td class="q3 q3-none">A</td>
+      <td></td>
+    </tr>
+
+    <!-- 8) SI (strong) -->
+    <tr>
+      <td>
+        <span class="blue">US HISTORY</span><br>
+        <span class="small">ANDERSON, C</span>
+      </td>
+      <td>F</td>
+      <td>F</td>
+      <td class="q3 q3-strong">F</td>
+      <td></td>
+    </tr>
+
+    <!-- 9) SI (strong) -->
+    <tr>
+      <td>
+        <span class="blue">SECONDARY MATH 3</span><br>
         <span class="small">Mr. HILTON</span>
       </td>
       <td>D</td>
@@ -149,22 +118,22 @@
       <td></td>
     </tr>
 
-    <!-- 8 SOFT -->
+    <!-- 10) SI (strong) -->
     <tr>
       <td>
-        <a href="#">MED ANATOMY/PHYS</a><br>
+        <span class="blue">MED ANATOMY/PHYS</span><br>
         <span class="small">Mrs. JENKINS</span>
       </td>
-      <td class="blue">A-</td>
+      <td>A-</td>
       <td>C+</td>
-      <td class="q3 q3-soft">D-</td>
+      <td class="q3 q3-strong">D-</td>
       <td></td>
     </tr>
 
-    <!-- 9 STRONG -->
+    <!-- 11) SI (strong) -->
     <tr>
       <td>
-        <a href="#">ENG LANG DEV LEVEL 2</a><br>
+        <span class="blue">ENG LANG DEV LEVEL 2</span><br>
         <span class="small">THOMAS, AMANDA</span>
       </td>
       <td>C-</td>
@@ -172,10 +141,5 @@
       <td class="q3 q3-strong">A</td>
       <td></td>
     </tr>
-
   </tbody>
 </table>
-
-</div>
-</body>
-</html>
