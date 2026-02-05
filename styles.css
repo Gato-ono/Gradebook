@@ -248,3 +248,22 @@ body{
 .badge.missing{background:#fef2f2; border-color:#fecaca;}
 .badge.done{background:#ecfdf5; border-color:#86efac;}
 .footer-space{height:18px;}
+/* Fuerza vista ancha (tipo PC) */
+body {
+  min-width: 1200px;
+}
+
+/* El contenedor principal debe ser ancho */
+.container, main, .wrap, .panel {
+  min-width: 1200px;
+}
+
+/* La tabla debe ser más ancha que la pantalla móvil */
+table {
+  min-width: 1200px;
+}
+
+/* Opcional: hace que el texto no se apile raro */
+.class-name {
+  white-space: nowrap;
+}
