@@ -246,70 +246,43 @@ body{
 }
 
 /* =========================
-   MISSING ASSIGNMENTS (PORTAL EXACT)
+   MISSING ASSIGNMENTS DETAIL
 ========================= */
-.missing{
-  border:1px solid #D3D3D3;
-  background:#F7F7F7;
-  padding:10px 12px;
-  font-size:14px;
-}
-
-.missing-header{
-  display:flex;
-  align-items:center;
-  gap:6px;
-  padding-bottom:6px;
-  border-bottom:1px solid #CFCFCF; /* 👈 línea divisoria */
-}
-
-.missing .title{
-  color:#C00000;
-  font-weight:700;
-}
-
-.missing .showall{
-  color:#1B5FA8;
-  font-weight:700;
-  text-decoration:none;
-}
-
-.missing-body{
-  padding-top:8px;
-}
-
-.missing-summary{
-  margin-bottom:6px;
-}
 
 .missing-item{
-  margin-left:18px;
-  line-height:1.5;
+  display:flex;
+  align-items:baseline;
+  gap:6px;
+  margin-top:4px;
 }
 
-.missing-item a{
-  color:#1B5FA8;
-  text-decoration:none;
-  font-weight:700;
-}
-
+/* "Due:" solo afecta a la PRIMERA línea */
 .missing-item .due{
+  color:#555;
   font-style:italic;
-  margin-right:4px;
-}
-
-.missing-item .date{
   margin-right:6px;
 }
 
+/* Fechas alineadas IGUAL */
+.missing-item .date{
+  display:inline-block;
+  min-width:90px; /* CLAVE: alinea 02/04 y 01/27 */
+  color:#333;
+}
+
+/* US HISTORY en azul */
 .missing-item .course{
+  color:#1B5FA8;
   font-weight:700;
 }
 
-.missing-item .period{
-  margin-left:4px;
+/* ANDERSON, C en azul */
+.missing-item .teacher{
+  color:#1B5FA8;
+  font-weight:700;
 }
 
-.missing-item .teacher{
-  margin-left:4px;
+/* Period en gris suave */
+.missing-item .period{
+  color:#555;
 }
