@@ -147,6 +147,36 @@ h1{
 /* ===== FORZAR MODO PC ===== */
 .page{
   min-width: 1100px;
+
+   /* =========================
+   FIX Missing Assignments
+   alineación + Due normal
+========================= */
+
+/* grid base */
+.missing-item{
+  display:grid;
+  grid-template-columns: 46px 110px auto;
+  column-gap:12px;
+  align-items:center;
+}
+
+/* palabra Due */
+.missing-item .due{
+  font-style: normal !important;
+  color:#555;
+}
+
+/* fechas */
+.missing-item .date{
+  font-weight:400;
+  color:#000;
+}
+
+/* cuando NO hay "Due:" (2da línea) */
+.missing-item .due-spacer{
+  width:46px;
+}
 }
 
 body{
