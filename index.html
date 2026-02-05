@@ -1,145 +1,162 @@
-<table class="grades">
-  <thead>
-    <tr>
-      <th>Class</th>
-      <th>Q1</th>
-      <th>Q2</th>
-      <th class="q3h">Q3</th>
-      <th>Q4</th>
-    </tr>
-  </thead>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gradebook</title>
 
-  <tbody>
-    <!-- 1) SI (strong) -->
-    <tr>
-      <td>
-        <span class="blue">WOMEN'S WEIGHT TRAINING 1</span><br>
-        <span class="small">Period 1 · ANDERSON, K</span>
-      </td>
-      <td class="blue">B+</td>
-      <td>A</td>
-      <td class="q3 q3-strong"></td>
-      <td></td>
-    </tr>
+  <!-- IMPORTANTE: NO le pongas nada después, ni un "0" -->
+  <link rel="stylesheet" href="./styles.css?v=7">
+</head>
 
-    <!-- 2) NO (none) -->
-    <tr>
-      <td>
-        <span class="blue">CARES - STUDENT ADVISORY</span><br>
-        <span class="small">KUHLMEIER, RACHEL</span>
-      </td>
-      <td></td>
-      <td></td>
-      <td class="q3 q3-none"></td>
-      <td></td>
-    </tr>
+<body>
+  <div class="page">
 
-    <!-- 3) SI (strong) -->
-    <tr>
-      <td>
-        <span class="blue">LANGUAGE ARTS 11</span><br>
-        <span class="small">Cowart, Kimberly</span>
-      </td>
-      <td>D+</td>
-      <td class="blue">D+</td>
-      <td class="q3 q3-strong">A-</td>
-      <td></td>
-    </tr>
+    <h1>Gradebook</h1>
 
-    <!-- 4) SI (strong) -->
-    <tr>
-      <td>
-        <span class="blue">ATTENDANCE AIDE</span><br>
-        <span class="small">KRISTIE MIDGLEY</span>
-      </td>
-      <td class="blue">P</td>
-      <td class="blue">P</td>
-      <td class="q3 q3-strong"></td>
-      <td></td>
-    </tr>
+    <h2 class="section-title">Class Grades</h2>
 
-    <!-- 5) NO (none) -->
-    <tr>
-      <td>
-        <span class="blue">FINANCIAL LITERACY</span><br>
-        <span class="small">LYON, SHANE</span>
-      </td>
-      <td></td>
-      <td></td>
-      <td class="q3 q3-none"></td>
-      <td></td>
-    </tr>
+    <table class="grades">
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Q1</th>
+          <th>Q2</th>
+          <th class="q3h">Q3</th>
+          <th>Q4</th>
+        </tr>
+      </thead>
 
-    <!-- 6) SI (strong) -->
-    <tr>
-      <td>
-        <span class="blue">FUND VOLLEYBALL 1</span><br>
-        <span class="small">MOURA, EDDIE</span>
-      </td>
-      <td>A-</td>
-      <td>A</td>
-      <td class="q3 q3-strong"></td>
-      <td></td>
-    </tr>
+      <tbody>
+        <!-- patrón Q3: si,no,si,si,no,si,no,si,si,si,si,si
+             aquí hay 11 filas, así que usamos:
+             1 si, 2 no, 3 si, 4 si, 5 no, 6 si, 7 no, 8 si, 9 si, 10 si, 11 si
+        -->
 
-    <!-- 7) NO (none) -->
-    <tr>
-      <td>
-        <span class="blue">FUND VOLLEYBALL 2</span><br>
-        <span class="small">MOURA, EDDIE</span>
-      </td>
-      <td></td>
-      <td></td>
-      <td class="q3 q3-none">A</td>
-      <td></td>
-    </tr>
+        <tr>
+          <td class="cls">
+            <span class="blue">WOMEN'S WEIGHT TRAINING 1</span><br>
+            <span class="small">Period 1 · ANDERSON, K</span>
+          </td>
+          <td class="blue">B+</td>
+          <td>A</td>
+          <td class="q3 q3-strong"></td>
+          <td></td>
+        </tr>
 
-    <!-- 8) SI (strong) -->
-    <tr>
-      <td>
-        <span class="blue">US HISTORY</span><br>
-        <span class="small">ANDERSON, C</span>
-      </td>
-      <td>F</td>
-      <td>F</td>
-      <td class="q3 q3-strong">F</td>
-      <td></td>
-    </tr>
+        <tr>
+          <td class="cls">
+            <span class="blue">CARES - STUDENT ADVISORY</span><br>
+            <span class="small">KUHLMEIER, RACHEL</span>
+          </td>
+          <td></td>
+          <td></td>
+          <td class="q3 q3-none"></td>
+          <td></td>
+        </tr>
 
-    <!-- 9) SI (strong) -->
-    <tr>
-      <td>
-        <span class="blue">SECONDARY MATH 3</span><br>
-        <span class="small">Mr. HILTON</span>
-      </td>
-      <td>D</td>
-      <td>C-</td>
-      <td class="q3 q3-strong">C-</td>
-      <td></td>
-    </tr>
+        <tr>
+          <td class="cls">
+            <span class="blue">LANGUAGE ARTS 11</span><br>
+            <span class="small">Cowart, Kimberly</span>
+          </td>
+          <td>D+</td>
+          <td class="blue">D+</td>
+          <td class="q3 q3-strong">A-</td>
+          <td></td>
+        </tr>
 
-    <!-- 10) SI (strong) -->
-    <tr>
-      <td>
-        <span class="blue">MED ANATOMY/PHYS</span><br>
-        <span class="small">Mrs. JENKINS</span>
-      </td>
-      <td>A-</td>
-      <td>C+</td>
-      <td class="q3 q3-strong">D-</td>
-      <td></td>
-    </tr>
+        <tr>
+          <td class="cls">
+            <span class="blue">ATTENDANCE AIDE</span><br>
+            <span class="small">KRISTIE MIDGLEY</span>
+          </td>
+          <td class="blue">P</td>
+          <td class="blue">P</td>
+          <td class="q3 q3-strong"></td>
+          <td></td>
+        </tr>
 
-    <!-- 11) SI (strong) -->
-    <tr>
-      <td>
-        <span class="blue">ENG LANG DEV LEVEL 2</span><br>
-        <span class="small">THOMAS, AMANDA</span>
-      </td>
-      <td>C-</td>
-      <td>B</td>
-      <td class="q3 q3-strong">A</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+        <tr>
+          <td class="cls">
+            <span class="blue">FINANCIAL LITERACY</span><br>
+            <span class="small">LYON, SHANE</span>
+          </td>
+          <td></td>
+          <td></td>
+          <td class="q3 q3-none"></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td class="cls">
+            <span class="blue">FUND VOLLEYBALL 1</span><br>
+            <span class="small">MOURA, EDDIE</span>
+          </td>
+          <td>A-</td>
+          <td>A</td>
+          <td class="q3 q3-strong"></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td class="cls">
+            <span class="blue">FUND VOLLEYBALL 2</span><br>
+            <span class="small">MOURA, EDDIE</span>
+          </td>
+          <td></td>
+          <td></td>
+          <td class="q3 q3-none">A</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td class="cls">
+            <span class="blue">US HISTORY</span><br>
+            <span class="small">ANDERSON, C</span>
+          </td>
+          <td>F</td>
+          <td>F</td>
+          <td class="q3 q3-strong">F</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td class="cls">
+            <span class="blue">SECONDARY MATH 3</span><br>
+            <span class="small">Mr. HILTON</span>
+          </td>
+          <td>D</td>
+          <td>C-</td>
+          <td class="q3 q3-strong">C-</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td class="cls">
+            <span class="blue">MED ANATOMY/PHYS</span><br>
+            <span class="small">Mrs. JENKINS</span>
+          </td>
+          <td>A-</td>
+          <td>C+</td>
+          <td class="q3 q3-strong">D-</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td class="cls">
+            <span class="blue">ENG LANG DEV LEVEL 2</span><br>
+            <span class="small">THOMAS, AMANDA</span>
+          </td>
+          <td>C-</td>
+          <td>B</td>
+          <td class="q3 q3-strong">A</td>
+          <td></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+</body>
+</html>
