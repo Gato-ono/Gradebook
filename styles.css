@@ -1,112 +1,73 @@
 * { box-sizing: border-box; }
 
-body {
-  margin: 0;
+body{
+  margin:0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #EEF2F6;
-  color: #222;
+  background:#EEF2F6;
+  color:#222;
 }
-
-/* TOP BAR */
-.topbar {
-  background: #D9E3EE;
-  border-bottom: 1px solid #BFCAD6;
-}
-.topbar .wrap {
-  max-width: 1200px;
-  margin: auto;
-  padding: 6px 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.brand { display: flex; gap: 8px; align-items: center; }
-.avatar {
-  background: #2B5F9E;
-  color: #fff;
-  font-weight: bold;
-  padding: 6px;
-  font-size: 12px;
-  border-radius: 3px;
-}
-.brand-name { color: #9B0000; font-weight: bold; font-size: 13px; }
-.brand-sub { font-size: 11px; color: #333; }
-.top-links a {
-  font-size: 12px;
-  color: #1B5FA8;
-  text-decoration: none;
-  margin-left: 10px;
-}
-
-/* PAGE */
-.page {
-  max-width: 1200px;
-  margin: 12px auto;
-  background: #fff;
-  padding: 12px;
-}
-
-/* TABLE */
-.grades {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  font-size: 13px;
-}
-
-.grades thead th {
-  background: #F1F3F6;
-  border: 1px solid #C9D3DF;
-  padding: 7px;
-  font-weight: bold;
-}
-
-.grades tbody td {
-  border: 1px solid #C9D3DF;
-  padding: 8px;
-  vertical-align: middle;
-}
-
-/* ZEBRA */
-.grades tbody tr:nth-child(odd) td { background: #E9EFF7; }
-.grades tbody tr:nth-child(even) td { background: #FFFFFF; }
-
-/* COLUMN WIDTH */
-.grades th:first-child,
-.grades td:first-child { width: 48%; text-align: left; }
-.grades th:not(:first-child),
-.grades td:not(:first-child) { width: 13%; text-align: center; }
-
-/* TEXT */
-.blue { color: #1B5FA8; font-weight: bold; }
-.small { font-size: 11px; color: #5B6A78; }
 
 /* =========================
-   Q3 (COLORES EXACTOS PORTAL)
+   TABLE
 ========================= */
+.grades{
+  width:100%;
+  border-collapse: separate;
+  border-spacing:0;
+  font-size:13px;
+}
+
+.grades thead th{
+  background:#F1F3F6;
+  border:1px solid #C9D3DF;
+  padding:7px;
+  font-weight:bold;
+  text-align:center;
+}
+
+.grades thead th:first-child{
+  text-align:left;
+}
+
+.grades tbody td{
+  border:1px solid #C9D3DF;
+  padding:8px;
+  vertical-align:middle;
+}
+
+/* ZEBRA (azulito exacto) */
+.grades tbody tr:nth-child(odd) td{ background:#EAEDF6; }
+.grades tbody tr:nth-child(even) td{ background:#FFFFFF; }
+
+/* WIDTHS */
+.grades th:first-child,
+.grades td:first-child{ width:48%; text-align:left; }
+
+.grades th:not(:first-child),
+.grades td:not(:first-child){ width:13%; text-align:center; }
+
+/* TEXT */
+.blue{ color:#1B5FA8; font-weight:bold; }
+.small{ font-size:11px; color:#5B6A78; }
+
 :root{
-  --q3-strong: #FFFF81; /* amarillo fuerte */
-  --q3-soft:   #FFFFA9; /* amarillo suave */
+  --q3-strong:#FFFF81; /* fuerte */
+  --q3-soft:#FFFFA9;   /* suave (por si lo usas) */
 }
 
-/* Header Q3 (cuadro chiquito) */
-.grades thead th.q3h {
-  background: var(--q3-strong);
-}
+/* Header Q3 (cuadrito chiquito) */
+.grades thead th.q3h{ background: var(--q3-strong); }
 
-/* Q3 base */
-.grades td.q3 {
-  background: inherit;
-}
+/* IMPORTANTE:
+   Q3 SIEMPRE sobreescribe el zebra
+*/
+.grades td.q3{ background: inherit; } /* base */
 
-.grades td.q3.q3-strong {
-  background: var(--q3-strong) !important;
-}
+/* fuertes */
+.grades td.q3.q3-strong{ background: var(--q3-strong) !important; }
 
-.grades td.q3.q3-soft {
-  background: var(--q3-soft) !important;
-}
+/* suaves (si luego quieres) */
+.grades td.q3.q3-soft{ background: var(--q3-soft) !important; }
 
-.grades td.q3.q3-none {
-  background: #FFFFFF !important;
-}
+/* blancos */
+.grades td.q3.q3-none{ background:#FFFFFF !important; }
