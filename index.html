@@ -5,14 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gradebook</title>
 
-  <!-- IMPORTANTE: NO le pongas nada después, ni un "0" -->
+  <!-- no pongas nada después del href -->
   <link rel="stylesheet" href="./styles.css?v=7">
 </head>
 
 <body>
-  <div class="page">
 
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">
+        <div class="avatar">SK</div>
+        <div class="brand-text">
+          <div class="brand-sub">Student Access</div>
+          <div class="brand-name">MARIANGEL</div>
+        </div>
+      </div>
+
+      <div class="top-links">
+        <a href="#">My Account</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Email History</a>
+        <a href="#">Exit</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page">
     <h1>Gradebook</h1>
+
+    <div class="missing">
+      <span class="title">Missing Assignments</span> <a href="#">(Show All)</a><br>
+      <b>MARIANGEL</b> has <b>10</b> missing assignments:
+    </div>
 
     <h2 class="section-title">Class Grades</h2>
 
@@ -22,17 +46,19 @@
           <th>Class</th>
           <th>Q1</th>
           <th>Q2</th>
+          <!-- el header Q3 es suave como en el portal -->
           <th class="q3h">Q3</th>
           <th>Q4</th>
         </tr>
       </thead>
 
       <tbody>
-        <!-- patrón Q3: si,no,si,si,no,si,no,si,si,si,si,si
-             aquí hay 11 filas, así que usamos:
-             1 si, 2 no, 3 si, 4 si, 5 no, 6 si, 7 no, 8 si, 9 si, 10 si, 11 si
+        <!-- PATRÓN REAL (11 filas):
+             fila:  0   1    2   3    4   5   6   7   8   9   10
+             Q3:   SI  NO   SI  NO   SI  SI  SI  SI  SI  SI  SI
         -->
 
+        <!-- 0 SI -->
         <tr>
           <td class="cls">
             <span class="blue">WOMEN'S WEIGHT TRAINING 1</span><br>
@@ -44,6 +70,7 @@
           <td></td>
         </tr>
 
+        <!-- 1 NO -->
         <tr>
           <td class="cls">
             <span class="blue">CARES - STUDENT ADVISORY</span><br>
@@ -55,6 +82,7 @@
           <td></td>
         </tr>
 
+        <!-- 2 SI -->
         <tr>
           <td class="cls">
             <span class="blue">LANGUAGE ARTS 11</span><br>
@@ -66,6 +94,7 @@
           <td></td>
         </tr>
 
+        <!-- 3 NO -->
         <tr>
           <td class="cls">
             <span class="blue">ATTENDANCE AIDE</span><br>
@@ -77,6 +106,7 @@
           <td></td>
         </tr>
 
+        <!-- 4 SI (OJO: esta era una de las que tú tenías mal) -->
         <tr>
           <td class="cls">
             <span class="blue">FINANCIAL LITERACY</span><br>
@@ -84,10 +114,11 @@
           </td>
           <td></td>
           <td></td>
-          <td class="q3 q3-none"></td>
+          <td class="q3 q3-strong"></td>
           <td></td>
         </tr>
 
+        <!-- 5 SI -->
         <tr>
           <td class="cls">
             <span class="blue">FUND VOLLEYBALL 1</span><br>
@@ -99,6 +130,7 @@
           <td></td>
         </tr>
 
+        <!-- 6 SI (OJO: esta era otra que tú tenías mal) -->
         <tr>
           <td class="cls">
             <span class="blue">FUND VOLLEYBALL 2</span><br>
@@ -106,10 +138,11 @@
           </td>
           <td></td>
           <td></td>
-          <td class="q3 q3-none">A</td>
+          <td class="q3 q3-strong">A</td>
           <td></td>
         </tr>
 
+        <!-- 7 SI -->
         <tr>
           <td class="cls">
             <span class="blue">US HISTORY</span><br>
@@ -121,6 +154,7 @@
           <td></td>
         </tr>
 
+        <!-- 8 SI -->
         <tr>
           <td class="cls">
             <span class="blue">SECONDARY MATH 3</span><br>
@@ -132,6 +166,7 @@
           <td></td>
         </tr>
 
+        <!-- 9 SI -->
         <tr>
           <td class="cls">
             <span class="blue">MED ANATOMY/PHYS</span><br>
@@ -143,6 +178,7 @@
           <td></td>
         </tr>
 
+        <!-- 10 SI -->
         <tr>
           <td class="cls">
             <span class="blue">ENG LANG DEV LEVEL 2</span><br>
@@ -156,7 +192,7 @@
 
       </tbody>
     </table>
-
   </div>
+
 </body>
 </html>
