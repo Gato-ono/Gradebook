@@ -152,3 +152,64 @@ h1{
 body{
   overflow-x: auto;
 }
+
+/* =========================
+   SUBBAR pegada a la tabla
+========================= */
+.grades-subbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+
+  /* look */
+  background: var(--head);
+  border: 1px solid var(--grid);
+  border-bottom: none; /* CLAVE: para que se "pegue" con la tabla */
+  padding: 8px 10px;
+
+  /* tamaño tipo portal */
+  font-size: 14px;
+  font-weight: 700;
+
+  /* para que no se vea gigante */
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* alinear texto como portal */
+.grades-subbar-left{
+  display:flex;
+  align-items:baseline;
+  gap:6px;
+  white-space:nowrap;
+}
+
+.gsb-name{ color:#222; }
+.gsb-school{ color:#5B6A78; }
+
+.grades-subbar-right{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  white-space:nowrap;
+}
+
+.gsb-link{
+  color: var(--link);
+  text-decoration:none;
+  font-weight:700;
+}
+.gsb-link:hover{ text-decoration:underline; }
+
+.gsb-sep{ color:#5B6A78; }
+
+/* CLAVE: que la tabla se pegue sin “doble borde” */
+.grades{
+  margin-top: 0;
+}
+
+/* si tu table header tiene border-top, quítalo para que no duplique */
+.grades thead th{
+  border-top: none;
+}
