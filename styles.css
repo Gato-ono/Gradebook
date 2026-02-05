@@ -1,10 +1,12 @@
-/* ================= BASE ================= */
+/* =========================
+   BASE
+========================= */
 * { box-sizing: border-box; }
 
 :root{
-  --q3-strong:#FFFF81;
-  --q3-soft:#FFFFA9;
-  --zebra:#EAEDF6;
+  --q3-strong:#FFFF81; /* fuerte */
+  --q3-soft:#FFFFA9;   /* suave */
+  --zebra:#EAEDF6;     /* azulito */
   --grid:#C9D3DF;
   --head:#F1F3F6;
   --link:#1B5FA8;
@@ -17,7 +19,9 @@ body{
   color:#222;
 }
 
-/* ================= TOP BAR ================= */
+/* =========================
+   TOP BAR
+========================= */
 .topbar{
   background:#D9E3EE;
   border-bottom:1px solid #BFCAD6;
@@ -39,8 +43,8 @@ body{
   font-size:12px;
   border-radius:3px;
 }
-.brand-sub{ font-size:11px; }
-.brand-name{ color:#9B0000; font-weight:bold; }
+.brand-sub{ font-size:11px; color:#333; }
+.brand-name{ color:#9B0000; font-weight:bold; font-size:13px; }
 
 .top-links a{
   font-size:12px;
@@ -49,7 +53,9 @@ body{
   margin-left:10px;
 }
 
-/* ================= PAGE ================= */
+/* =========================
+   PAGE
+========================= */
 .page{
   max-width:1200px;
   margin:12px auto;
@@ -57,80 +63,230 @@ body{
   padding:12px;
 }
 
-h1{ font-size:44px; margin:6px 0 14px; }
-.section-title{ font-size:28px; margin:18px 0 10px; }
+h1{
+  font-size:44px;
+  margin:6px 0 14px;
+}
 
-/* ================= Missing Assignments ================= */
+.section-title{
+  font-size:28px;
+  margin:18px 0 10px;
+  font-weight:700;
+}
+
+/* =========================
+   MISSING BOX
+========================= */
 .missing{
-  border:1px solid #d3d3d3;
-  background:#f7f7f7;
+  border:1px solid #D3D3D3;
+  background:#F7F7F7;
   padding:10px;
-  margin-bottom:16px;
+  font-size:16px;
+  margin-bottom:18px;
+}
+.missing .title{ color:#C00000; font-weight:700; }
+.missing a{ color:var(--link); text-decoration:none; font-weight:700; }
+
+/* =========================
+   TABLE
+========================= */
+.grades{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  font-size:18px;
 }
 
-.missing-header{
-  border-bottom:1px solid #cfcfcf;
-  padding-bottom:6px;
-  margin-bottom:6px;
+.grades thead th{
+  background:var(--head);
+  border:1px solid var(--grid);
+  padding:10px 12px;
+  font-weight:700;
+  text-align:center;
 }
 
-.missing .title{
-  color:#c00000;
-  font-weight:bold;
+.grades thead th:first-child{ text-align:left; }
+
+.grades tbody td{
+  border:1px solid var(--grid);
+  padding:14px 12px;
+  vertical-align:middle;
 }
 
-.missing a{
-  color:var(--link);
-  font-weight:bold;
-  text-decoration:none;
+/* widths */
+.grades th:first-child,
+.grades td:first-child{ width:48%; text-align:left; }
+.grades th:not(:first-child),
+.grades td:not(:first-child){ width:13%; text-align:center; }
+
+/* zebra (azulito) */
+.grades tbody tr:nth-child(odd) td{ background:var(--zebra); }
+.grades tbody tr:nth-child(even) td{ background:#fff; }
+
+/* text */
+.blue{ color:var(--link); font-weight:700; }
+.small{ font-size:14px; color:#5B6A78; }
+
+/* =========================
+   Q3 COLORS (GANAN AL ZEBRA)
+========================= */
+
+/* header Q3: strong*/
+.grades thead th.q3h{
+  background:var(--q3-strong) !important;
 }
 
-.missing-item{
-  display:grid;
-  grid-template-columns:40px 100px auto;
-  gap:6px;
-  margin-top:4px;
+/* base */
+.grades td.q3{ background:inherit; }
+
+/* fuerte / suave / blanco */
+.grades td.q3.q3-strong{ background:var(--q3-strong) !important; }
+.grades td.q3.q3-soft{   background:var(--q3-soft)   !important; }
+.grades td.q3.q3-none{   background:#fff             !important; }
+
+/* ===== FORZAR MODO PC ===== */
+.page{
+  min-width: 1100px;
+}
+
+body{
+  overflow-x: auto;
+}
+
+/* =========================
+   SUBBAR pegada a la tabla
+========================= */
+.grades-subbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+
+  /* look */
+  background: var(--head);
+  border: 1px solid var(--grid);
+  border-bottom: none; /* CLAVE: para que se "pegue" con la tabla */
+  padding: 8px 10px;
+
+  /* tamaño tipo portal */
+  font-size: 14px;
+  font-weight: 700;
+
+  /* para que no se vea gigante */
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* ===== Subbar estilo portal ===== */
+.grades-subbar{
+  display: inline-flex;              /* IMPORTANT: que no ocupe todo el ancho */
+  align-items: center;
+  gap: 14px;
+
+  background: #EEF2F6;
+  border: 1px solid #BFCAD6;
+  border-bottom: none;               /* se pega con la tabla */
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
+  padding: 6px 10px;
+  margin: 6px 0 0 0;                 /* pegado */
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* que quede a la izquierda como en el portal */
+.grades-subbar-left{
+  display:flex;
   align-items:baseline;
-}
-
-.missing-item .due{
-  font-style:normal;
-  color:#444;
-}
-
-.missing-item .date{
-  color:#000;
+  gap:6px;
   white-space:nowrap;
 }
 
-.missing-item a,
+.gsb-name{ color:#222; }
+.gsb-school{ color:#222; font-weight: 700; }
+
+.grades-subbar-right{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  white-space:nowrap;
+}
+
+/* LINKS: azules y SIN morado/subrayado */
+.gsb-link,
+.gsb-link:visited{
+  color:#1B5FA8;
+  text-decoration:none;
+  font-weight:700;
+}
+.gsb-link:hover{ text-decoration:underline; }
+
+.gsb-sep{ color:#222; font-weight:700; }
+
+/* ===== Para que la tabla se pegue perfecto ===== */
+.grades{
+  margin-top: 0;
+}
+
+/* quita el borde-top del header para que NO se vea doble */
+.grades thead th{
+  border-top: none;
+}
+
+/* =========================
+   COLOR DE TODAS LAS NOTAS
+========================= */
+
+/* Todas las celdas de notas (Q1, Q2, Q3, Q4) */
+.grades tbody td:not(:first-child) {
+  color: #1B5FA8;       /* azul portal */
+  font-weight: 700;
+}
+
+/* =========================
+   MISSING ASSIGNMENTS DETAIL (ALINEADO)
+========================= */
+
+.missing-item{
+  display:grid;
+  grid-template-columns: 52px 110px 1fr; /* Due | Fecha | Texto */
+  align-items:baseline;
+  column-gap:12px;
+  margin-top:4px;
+}
+
+/* Due: normal (NO cursiva) */
+.missing-item .due{
+  color:#555;
+  font-style:normal;
+  font-weight:400;
+}
+
+/* espacio fantasma para que 2da línea quede igual */
+.missing-item .due-spacer{
+  width:52px;
+}
+
+/* fecha fija y alineada */
+.missing-item .date{
+  color:#222;
+}
+
+/* links y azules */
+.missing-item a{
+  color:#1B5FA8;
+  font-weight:700;
+  text-decoration:none;
+}
+
 .missing-item .course,
 .missing-item .teacher{
-  color:var(--link);
+  color:#1B5FA8;
   font-weight:700;
 }
 
 .missing-item .period{
-  color:#444;
-}
-
-/* ================= Subbar ================= */
-.grades-subbar{
-  display:flex;
-  justify-content:space-between;
-  background:#F3F3F3;
-  border:1px solid #d3d3d3;
-  padding:6px 10px;
-  font-size:14px;
-}
-
-.grades-subbar a{
-  color:var(--link);
-  font-weight:700;
-  text-decoration:none;
-}
-
-.grades-divider{
-  border-bottom:1px solid #cfcfcf;
-  margin-bottom:6px;
+  color:#555;
 }
