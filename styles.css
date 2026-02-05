@@ -82,21 +82,31 @@ body {
 .small { font-size: 11px; color: #5B6A78; }
 
 /* =========================
-   Q3 (AMARILLO SUAVE REAL)
+   Q3 (COLORES EXACTOS PORTAL)
 ========================= */
 :root{
-  --q3-strong: #FFFF81;  /* amarillo suave (no fuerte) */
-  --q3-soft:   #FFFFA9;  /* amarillo más suave */
+  --q3-strong: #FFFF81; /* amarillo fuerte */
+  --q3-soft:   #FFFFA9; /* amarillo suave */
 }
 
-.grades thead th.q3h { background: var(--q3-strong); }
-.grades td.q3 { background: inherit; }
+/* Header Q3 (cuadro chiquito) */
+.grades thead th.q3h {
+  background: var(--q3-strong);
+}
 
-/* Amarillo suave "principal" */
-.grades td.q3.q3-strong { background: var(--q3-strong); }
+/* Q3 base */
+.grades td.q3 {
+  background: inherit;
+}
 
-/* Amarillo más suave */
-.grades td.q3.q3-soft { background: var(--q3-soft); }
+.grades td.q3.q3-strong {
+  background: var(--q3-strong) !important;
+}
 
-/* Blanco */
-.grades td.q3.q3-none { background: #FFFFFF; }
+.grades td.q3.q3-soft {
+  background: var(--q3-soft) !important;
+}
+
+.grades td.q3.q3-none {
+  background: #FFFFFF !important;
+}
