@@ -70,3 +70,5 @@ tbody td{
   color:#586474 !important;
   font-weight:700 !important;
 }
+/* === TEST: si esto no cambia, tu CSS NO está cargando === */
+body { outline: 8px solid red !important; }
