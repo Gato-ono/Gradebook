@@ -1,40 +1,6 @@
-const student = {
-  name: "ALEX RIVERA (DEMO)",
-  schoolLine: "ALEX (COPPER HILLS HIGH) — DEMO"
-};
-
-const classes = [
-  {
-    name: "WOMEN'S WEIGHT TRAINING 1",
-    period: "1 (7:35 AM - 9:05 AM)",
-    teacher: "ANDERSON, K",
-    q: { Q1:"B+", Q2:"A", Q3:"", Q4:"" },
-    assignments: [
-      { title:"Workout Plan", due:"2026-02-02", status:"Completed" }
-    ]
-  },
-  {
-    name: "CARES - STUDENT ADVISORY",
-    period: "1 (7:35 AM - 9:05 AM)",
-    teacher: "KUHLMEIER, RACHEL",
-    q: { Q1:"", Q2:"", Q3:"", Q4:"" },
-    assignments: []
-  },
-  {
-    name: "LANGUAGE ARTS 11",
-    period: "2 (9:10 AM - 10:40 AM)",
-    teacher: "COWART, KIMBERLY",
-    q: { Q1:"D+", Q2:"D+", Q3:"A-", Q4:"" },
-    assignments: [
-      { title:"Essay Draft", due:"2026-02-06", status:"Missing" }
-    ]
-  },
-  {
-    name: "ATTENDANCE AIDE",
-    period: "3 (10:45 AM - 12:50 PM)",
-    teacher: "MIDGLEY, KRISTIE",
-    q: { Q1:"P", Q2:"P", Q3:"", Q4:"" },
-    assignments: []
+// app.js
+// Por ahora no necesitamos JS. Esto es solo para que el archivo exista sin errores.
+console.log("Gradebook loaded");    assignments: []
   },
   {
     name: "FUND VOLLEYBALL 1",
