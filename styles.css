@@ -236,11 +236,11 @@ body{
 }
 
 /* =========================
-   NOTAS – COLOR BASE
+   COLOR DE TODAS LAS NOTAS
 ========================= */
 
-/* todas las notas (Q1, Q2, Q3, Q4) */
-.grades tbody td:not(:first-child){
-  color: #1B5FA8;        /* azul portal */
-  font-weight: 700;     /* un poco más marcado */
+/* Todas las celdas de notas (Q1, Q2, Q3, Q4) */
+.grades tbody td:not(:first-child) {
+  color: #1B5FA8;       /* azul portal */
+  font-weight: 700;
 }
