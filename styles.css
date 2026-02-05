@@ -244,3 +244,72 @@ body{
   color: #1B5FA8;       /* azul portal */
   font-weight: 700;
 }
+
+/* =========================
+   MISSING ASSIGNMENTS (PORTAL EXACT)
+========================= */
+.missing{
+  border:1px solid #D3D3D3;
+  background:#F7F7F7;
+  padding:10px 12px;
+  font-size:14px;
+}
+
+.missing-header{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  padding-bottom:6px;
+  border-bottom:1px solid #CFCFCF; /* 👈 línea divisoria */
+}
+
+.missing .title{
+  color:#C00000;
+  font-weight:700;
+}
+
+.missing .showall{
+  color:#1B5FA8;
+  font-weight:700;
+  text-decoration:none;
+}
+
+.missing-body{
+  padding-top:8px;
+}
+
+.missing-summary{
+  margin-bottom:6px;
+}
+
+.missing-item{
+  margin-left:18px;
+  line-height:1.5;
+}
+
+.missing-item a{
+  color:#1B5FA8;
+  text-decoration:none;
+  font-weight:700;
+}
+
+.missing-item .due{
+  font-style:italic;
+  margin-right:4px;
+}
+
+.missing-item .date{
+  margin-right:6px;
+}
+
+.missing-item .course{
+  font-weight:700;
+}
+
+.missing-item .period{
+  margin-left:4px;
+}
+
+.missing-item .teacher{
+  margin-left:4px;
+}
