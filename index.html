@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Access - Demo Gradebook</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <div class="logo">SK</div>
+      <div class="brand-text">
+        <div class="small">Student Access</div>
+        <div class="name" id="studentName">ALEX RIVERA (DEMO)</div>
+      </div>
+    </div>
+
+    <nav class="links">
+      <a href="#" onclick="return false;">My Account</a>
+      <a href="#" onclick="return false;">Contact Us</a>
+      <a href="#" onclick="return false;">Email History</a>
+      <a href="#" onclick="return false;">Exit</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <h1 class="page-title">Gradebook</h1>
+
+  <section class="box">
+    <div class="box-head">
+      <div class="box-title">
+        <span class="warn">Missing Assignments</span>
+        <a href="#" onclick="return false;">(Show All)</a>
+      </div>
+    </div>
+
+    <div class="missing">
+      <div><b>DEMO</b> has <b id="missingCount">0</b> missing assignments:</div>
+      <div id="missingList" class="missing-list"></div>
+    </div>
+  </section>
+
+  <section class="box">
+    <div class="grades-head">
+      <div class="grades-title">Class Grades</div>
+      <div class="note">
+        Grades posted to the report card are in <b>bold</b>.<br/>
+        Current grades are highlighted.
+      </div>
+    </div>
+
+    <div class="subbar">
+      <div class="pill" id="schoolLine">DEMO STUDENT (COPPER HILLS HIGH)</div>
+      <div class="sub-actions">
+        <a href="#" onclick="return false;">Display Options</a>
+        <span class="sep">|</span>
+        <a href="#" onclick="return false;">GPA</a>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th class="c-class">Class</th>
+            <th class="c-q">Q1</th>
+            <th class="c-q">Q2</th>
+            <th class="c-q q-current">Q3</th>
+            <th class="c-q">Q4</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="footer-space"></div>
+</main>
+
+<!-- Modal -->
+<div class="modal-bg" id="mbg" hidden></div>
+<div class="modal" id="modal" hidden>
+  <div class="modal-head">
+    <div>
+      <div class="m-title" id="mTitle">Class</div>
+      <div class="m-sub" id="mSub">Period • Teacher</div>
+    </div>
+    <button class="x" id="closeBtn">✕</button>
+  </div>
+  <div class="modal-body">
+    <div class="m-row"><span class="muted">Current grade</span><b id="mGrade">—</b></div>
+    <div class="divider"></div>
+    <div class="m-assign-title">Assignments (demo)</div>
+    <div id="mAssign"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
