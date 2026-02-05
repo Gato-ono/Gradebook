@@ -246,43 +246,47 @@ body{
 }
 
 /* =========================
-   MISSING ASSIGNMENTS DETAIL
+   MISSING ASSIGNMENTS DETAIL (ALINEADO)
 ========================= */
 
 .missing-item{
-  display:flex;
+  display:grid;
+  grid-template-columns: 52px 110px 1fr; /* Due | Fecha | Texto */
   align-items:baseline;
-  gap:6px;
+  column-gap:12px;
   margin-top:4px;
 }
 
-/* "Due:" solo afecta a la PRIMERA línea */
+/* Due: normal (NO cursiva) */
 .missing-item .due{
   color:#555;
-  font-style:italic;
-  margin-right:6px;
+  font-style:normal;
+  font-weight:400;
 }
 
-/* Fechas alineadas IGUAL */
+/* espacio fantasma para que 2da línea quede igual */
+.missing-item .due-spacer{
+  width:52px;
+}
+
+/* fecha fija y alineada */
 .missing-item .date{
-  display:inline-block;
-  min-width:90px; /* CLAVE: alinea 02/04 y 01/27 */
-  color:#333;
+  color:#222;
 }
 
-/* US HISTORY en azul */
-.missing-item .course{
+/* links y azules */
+.missing-item a{
   color:#1B5FA8;
   font-weight:700;
+  text-decoration:none;
 }
 
-/* ANDERSON, C en azul */
+.missing-item .course,
 .missing-item .teacher{
   color:#1B5FA8;
   font-weight:700;
 }
 
-/* Period en gris suave */
 .missing-item .period{
   color:#555;
 }
