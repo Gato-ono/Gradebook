@@ -85,8 +85,8 @@ body {
    Q3 (AMARILLO SUAVE REAL)
 ========================= */
 :root{
-  --q3-strong: #FFF2A6;  /* amarillo suave (no fuerte) */
-  --q3-soft:   #FFF8CF;  /* amarillo más suave */
+  --q3-strong: #FFFF81;  /* amarillo suave (no fuerte) */
+  --q3-soft:   #FFFFA9;  /* amarillo más suave */
 }
 
 .grades thead th.q3h { background: var(--q3-strong); }
