@@ -90,30 +90,27 @@ h1{
 /* =========================
    TABLE
 ========================= */
-
-/* escala general */
 .grades{
-  font-size: 15px; /* antes 18 */
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  font-size:18px;
 }
 
-/* encabezados */
 .grades thead th{
-  padding: 7px 9px; /* antes 10px 12px */
+  background:var(--head);
+  border:1px solid var(--grid);
+  padding:10px 12px;
+  font-weight:700;
+  text-align:center;
 }
 
-/* celdas */
+.grades thead th:first-child{ text-align:left; }
+
 .grades tbody td{
-  padding: 9px 9px; /* antes 14px 12px */
-}
-
-/* texto secundario */
-.small{
-  font-size: 13px;
-}
-
-/* títulos de clases */
-.blue{
-  font-size: 15px;
+  border:1px solid var(--grid);
+  padding:14px 12px;
+  vertical-align:middle;
 }
 
 /* widths */
