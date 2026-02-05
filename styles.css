@@ -1,64 +1,26 @@
-/* ===== TABLA GRADEBOOK (CLON REAL) ===== */
+/* ===== Q3 EXACTO POR FILA ===== */
 
-.grades {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
+/* Header Q3 (cuadrito chiquito) amarillo fuerte */
+.grades thead th.q3h{
+  background: #FFE96A !important; /* intenso */
 }
 
-/* Bordes EXACTOS */
-.grades th,
-.grades td {
-  border: 1px solid #C7D2DE;
-  padding: 6px 8px;
-  vertical-align: middle;
+/* Por defecto Q3 NO es amarillo */
+.grades td.q3{
+  background: inherit !important;
 }
 
-/* Header */
-.grades thead th {
-  background: #F1F4F8;
-  font-weight: bold;
-  text-align: center;
+/* Amarillo intenso (0,3,5,7,9,11) */
+.grades td.q3.q3-strong{
+  background: #FFE96A !important;
 }
 
-/* Zebra REAL (filas 1,3,5...) */
-.grades tbody tr:nth-child(odd) td {
-  background-color: #E8F0FB;
+/* Amarillo suave (2,8,10 por ejemplo) */
+.grades td.q3.q3-soft{
+  background: #FFF6B0 !important;
 }
 
-/* Filas pares blancas */
-.grades tbody tr:nth-child(even) td {
-  background-color: #FFFFFF;
-}
-
-/* Columna Q3 amarilla SIEMPRE */
-.grades td.q3,
-.grades th.q3 {
-  background-color: #FFF59A !important;
-}
-
-/* Texto azul como el original */
-.grades a,
-.grades .grade {
-  color: #1F5FA6;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-/* Alinear columnas Q */
-.grades td:not(:first-child),
-.grades th:not(:first-child) {
-  text-align: center;
-  width: 80px;
-}
-
-/* Columna Class más ancha */
-.grades td:first-child,
-.grades th:first-child {
-  width: 45%;
-}
-
-/* Hover muy leve (opcional, igual al sistema) */
-.grades tbody tr:hover td {
-  background-color: #DEEAF8;
+/* Blanco (fila 4,6) */
+.grades td.q3.q3-none{
+  background: #FFFFFF !important;
 }
