@@ -234,3 +234,13 @@ body{
 .grades thead th{
   border-top: none;
 }
+
+/* =========================
+   NOTAS – COLOR BASE
+========================= */
+
+/* todas las notas (Q1, Q2, Q3, Q4) */
+.grades tbody td:not(:first-child){
+  color: #1B5FA8;        /* azul portal */
+  font-weight: 700;     /* un poco más marcado */
+}
