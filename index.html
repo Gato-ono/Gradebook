@@ -2,19 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- Fuerza vista tipo PC -->
-  <link rel="stylesheet" href="styles.css?v=888">
-
   <title>Gradebook</title>
-
-  <!-- CSS (anti-cache) -->
-  <link rel="stylesheet" href="styles.css?v=99">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
-
 <body>
 
-<!-- ===== TOP BAR ===== -->
+<!-- TOP BAR -->
 <header class="topbar">
   <div class="wrap">
     <div class="brand">
@@ -24,212 +18,163 @@
         <div class="brand-name">MARIANGEL</div>
       </div>
     </div>
-
-    <nav class="menu">
+    <div class="top-links">
       <a href="#">My Account</a>
       <a href="#">Contact Us</a>
       <a href="#">Email History</a>
-      <a class="exit" href="#">Exit</a>
-    </nav>
+      <a href="#">Exit</a>
+    </div>
   </div>
 </header>
 
-<!-- ===== MAIN ===== -->
-<main class="container">
+<div class="page">
 
-  <h1>Gradebook</h1>
+<h1>Gradebook</h1>
 
-  <!-- ===== Missing Assignments ===== -->
-  <section class="panel">
-    <div class="panelhead">
-      <span class="paneltitle red">Missing Assignments</span>
-      <a href="#">(Show All)</a>
-    </div>
+<!-- MISSING -->
+<div class="missing">
+  <div class="title">Missing Assignments <a href="#">(Show All)</a></div>
+  <div>MARIANGEL has <b>10</b> missing assignments:</div>
+</div>
 
-    <div class="panelbody">
-      <p><b>MARIANGEL</b> has <b class="red">10</b> missing assignments:</p>
+<div class="section-title">Class Grades</div>
 
-      <div class="missitem">
-        <span class="due">Due: 02/04/2026</span>
-        <span>
-          <a href="#">Trading Card</a>,
-          <b>US HISTORY</b> (Period 5) ANDERSON, C
-        </span>
-      </div>
+<table class="grades">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Q1</th>
+      <th>Q2</th>
+      <th class="q3h">Q3</th>
+      <th>Q4</th>
+    </tr>
+  </thead>
 
-      <div class="missitem">
-        <span class="due">Due: 01/27/2026</span>
-        <span>
-          <a href="#">Firsthand Accounts of the Great Depression</a>,
-          <b>US HISTORY</b> (Period 5) ANDERSON, C
-        </span>
-      </div>
-    </div>
-  </section>
+  <tbody>
 
-  <!-- ===== Class Grades ===== -->
-  <section class="panel">
+    <!-- 0 STRONG -->
+    <tr>
+      <td>
+        <a href="#">WOMENS WEIGHT TRAINING 1</a><br>
+        <span class="small">Period 1 · ANDERSON, K</span>
+      </td>
+      <td class="blue">B+</td>
+      <td>A</td>
+      <td class="q3 q3-strong"></td>
+      <td></td>
+    </tr>
 
-    <div class="gradehead">
-      <h2>Class Grades 🖨️</h2>
-    </div>
+    <!-- 1 NORMAL -->
+    <tr>
+      <td>
+        <a href="#">CARES - STUDENT ADVISORY</a><br>
+        <span class="small">KUHLMEIER, RACHEL</span>
+      </td>
+      <td></td>
+      <td></td>
+      <td class="q3"></td>
+      <td></td>
+    </tr>
 
-    <div class="subbar">
-      <div>
-        <b>MARIANGEL (COPPER HILLS HIGH)</b>
-        <span class="links">
-          <a href="#">Display Options</a> |
-          <a href="#">GPA</a>
-        </span>
-      </div>
+    <!-- 2 SOFT -->
+    <tr>
+      <td>
+        <a href="#">LANGUAGE ARTS 11</a><br>
+        <span class="small">Cowart, Kimberly</span>
+      </td>
+      <td class="blue">D+</td>
+      <td>D+</td>
+      <td class="q3 q3-soft">A-</td>
+      <td></td>
+    </tr>
 
-      <div class="note">
-        Grades posted to the report card are in <b>bold</b>.<br>
-        Current grades are highlighted.
-      </div>
-    </div>
+    <!-- 3 STRONG -->
+    <tr>
+      <td>
+        <a href="#">ATTENDANCE AIDE</a><br>
+        <span class="small">KRISTIE MIDGLEY</span>
+      </td>
+      <td>P</td>
+      <td>P</td>
+      <td class="q3 q3-strong"></td>
+      <td></td>
+    </tr>
 
-    <table class="grades">
-      <thead>
-        <tr>
-          <th class="classcol">Class</th>
-          <th>Q1</th>
-          <th>Q2</th>
-          <th class="q3h">Q3</th>
-          <th>Q4</th>
-        </tr>
-      </thead>
+    <!-- 4 NONE -->
+    <tr>
+      <td>
+        <a href="#">FINANCIAL LITERACY</a><br>
+        <span class="small">LYON, SHANE</span>
+      </td>
+      <td></td>
+      <td></td>
+      <td class="q3 q3-none"></td>
+      <td></td>
+    </tr>
 
-      <tbody>
+    <!-- 5 STRONG -->
+    <tr>
+      <td>
+        <a href="#">FUND VOLLEYBALL 1</a><br>
+        <span class="small">MOURA, EDDIE</span>
+      </td>
+      <td class="blue">A-</td>
+      <td>A</td>
+      <td class="q3 q3-strong"></td>
+      <td></td>
+    </tr>
 
-        <tr>
-          <td>
-            ▶ <b>WOMEN'S WEIGHT TRAINING 1</b><br>
-            <span class="small">Period 1 (7:35 AM - 9:05 AM)</span><br>
-            <span class="small">ANDERSON, K</span>
-          </td>
-          <td><b>B+</b></td>
-          <td class="blue">A</td>
-          <td class="q3"></td>
-          <td></td>
-        </tr>
+    <!-- 6 NONE -->
+    <tr>
+      <td>
+        <a href="#">US HISTORY</a><br>
+        <span class="small">ANDERSON, C</span>
+      </td>
+      <td class="blue">F</td>
+      <td>F</td>
+      <td class="q3 q3-none">F</td>
+      <td></td>
+    </tr>
 
-        <tr>
-          <td>
-            ▶ <b>CARES - STUDENT ADVISORY</b><br>
-            <span class="small">Period 1 (7:35 AM - 9:05 AM)</span><br>
-            <span class="small">KUHLMEIER, RACHEL</span>
-          </td>
-          <td></td><td></td><td class="q3"></td><td></td>
-        </tr>
+    <!-- 7 STRONG -->
+    <tr>
+      <td>
+        <a href="#">SECONDARY MATH 3</a><br>
+        <span class="small">Mr. HILTON</span>
+      </td>
+      <td>D</td>
+      <td>C-</td>
+      <td class="q3 q3-strong">C-</td>
+      <td></td>
+    </tr>
 
-        <tr>
-          <td>
-            ▶ <b>LANGUAGE ARTS 11</b><br>
-            <span class="small">Period 2 (9:10 AM - 10:40 AM)</span><br>
-            <span class="small">Cowart, Kimberly</span>
-          </td>
-          <td><b>D+</b></td>
-          <td class="blue">D+</td>
-          <td class="q3 blue">A-</td>
-          <td></td>
-        </tr>
+    <!-- 8 SOFT -->
+    <tr>
+      <td>
+        <a href="#">MED ANATOMY/PHYS</a><br>
+        <span class="small">Mrs. JENKINS</span>
+      </td>
+      <td class="blue">A-</td>
+      <td>C+</td>
+      <td class="q3 q3-soft">D-</td>
+      <td></td>
+    </tr>
 
-        <tr>
-          <td>
-            ▶ <b>ATTENDANCE AIDE</b><br>
-            <span class="small">Period 3 (10:45 AM - 12:50 PM)</span><br>
-            <span class="small">KRISTIE MIDGLEY</span>
-          </td>
-          <td class="blue">P</td>
-          <td class="blue">P</td>
-          <td class="q3"></td>
-          <td></td>
-        </tr>
+    <!-- 9 STRONG -->
+    <tr>
+      <td>
+        <a href="#">ENG LANG DEV LEVEL 2</a><br>
+        <span class="small">THOMAS, AMANDA</span>
+      </td>
+      <td>C-</td>
+      <td>B</td>
+      <td class="q3 q3-strong">A</td>
+      <td></td>
+    </tr>
 
-        <tr>
-          <td>
-            ▶ <b>FINANCIAL LITERACY</b><br>
-            <span class="small">Period 3A (11:20 AM - 12:50 PM)</span><br>
-            <span class="small">LYON, SHANE</span>
-          </td>
-          <td></td><td></td><td class="q3"></td><td></td>
-        </tr>
+  </tbody>
+</table>
 
-        <tr>
-          <td>
-            ▶ <b>FUND VOLLEYBALL 1</b><br>
-            <span class="small">Period 4 (12:55 PM - 2:25 PM)</span><br>
-            <span class="small">MOURA, EDDIE</span>
-          </td>
-          <td><b>A-</b></td>
-          <td class="blue">A</td>
-          <td class="q3"></td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>
-            ▶ <b>FUND VOLLEYBALL 2</b><br>
-            <span class="small">Period 4 (12:55 PM - 2:25 PM)</span><br>
-            <span class="small">MOURA, EDDIE</span>
-          </td>
-          <td></td><td></td><td class="q3 blue">A</td><td></td>
-        </tr>
-
-        <tr>
-          <td>
-            ▶ <b>US HISTORY</b><br>
-            <span class="small">Period 5 (7:35 AM - 9:05 AM)</span><br>
-            <span class="small">ANDERSON, C</span>
-          </td>
-          <td><b>F</b></td>
-          <td class="blue">F</td>
-          <td class="q3 blue">F</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>
-            ▶ <b>SECONDARY MATH 3</b><br>
-            <span class="small">Period 6 (9:10 AM - 10:40 AM)</span><br>
-            <span class="small">Mr. HILTON</span>
-          </td>
-          <td><b>D</b></td>
-          <td class="blue">C-</td>
-          <td class="q3 blue">C-</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>
-            ▶ <b>MED ANATOMY/PHYS</b><br>
-            <span class="small">Period 7A (11:20 AM - 12:50 PM)</span><br>
-            <span class="small">Mrs. JENKINS</span>
-          </td>
-          <td><b>A-</b></td>
-          <td class="blue">C+</td>
-          <td class="q3 blue">D-</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>
-            ▶ <b>ENG LANG DEV LEVEL 2</b><br>
-            <span class="small">Period 8 (12:55 PM - 2:25 PM)</span><br>
-            <span class="small">THOMAS, AMANDA</span>
-          </td>
-          <td><b>C-</b></td>
-          <td class="blue">B</td>
-          <td class="q3 blue">A</td>
-          <td></td>
-        </tr>
-
-      </tbody>
-    </table>
-
-  </section>
-</main>
-
+</div>
 </body>
 </html>
