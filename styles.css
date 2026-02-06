@@ -386,3 +386,61 @@ body{
   font-weight:700;
   line-height:1.1;
 }
+
+/* ===== FIX DEFINITIVO HEADER (override de reglas viejas) ===== */
+.topbar .wrap.topgrid{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 12px;
+
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between; /* acerca todo y mantiene derecha pegada */
+  gap: 18px;
+}
+
+/* izquierda: logo + links más compactos */
+.topbar .wrap.topgrid .left{
+  display:flex;
+  flex-direction:column;
+  gap: 6px;
+  flex: 0 0 220px; /* controla cuánto espacio ocupa la izquierda */
+}
+
+/* derecha: que no se vaya al borde y quede cerca */
+.topbar .wrap.topgrid .right{
+  flex: 1 1 auto;
+  text-align:right;
+  padding-top: 2px;
+}
+
+/* tamaño del logo (UNO solo) */
+.topbar .wrap.topgrid .header-logo{
+  height: 46px;   /* súbelo a 50 si quieres */
+  width:auto;
+  display:block;
+}
+
+/* links debajo del logo, sin margins viejos */
+.topbar .wrap.topgrid .left-links{
+  display:flex;
+  gap:14px;
+}
+
+.topbar .wrap.topgrid .left-links a{
+  margin-left:0 !important;
+  font-size:12px;
+}
+
+/* tipografías derecha */
+.topbar .wrap.topgrid .right .brand-sub{
+  font-size:14px;
+  font-weight:600;
+  line-height:1.1;
+}
+
+.topbar .wrap.topgrid .right .brand-name{
+  font-size:20px;
+  font-weight:700;
+  line-height:1.1;
+}
