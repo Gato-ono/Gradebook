@@ -301,13 +301,36 @@ body{
   margin-top: 2px;
 }
 
-/* ===== Header Skyward corregido ===== */
-.brand-name.full-name{
-  color:#9B0000;
-  font-weight:700;
-  font-size:16px;
-  line-height:1.2;
+/* ===== Header logo + nombre grande ===== */
+
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
+
+.header-logo{
+  height: 56px;        /* ← tamaño del logo (ajusta aquí) */
+  width: auto;
+  display: block;
+}
+
+.brand-text{
+  line-height: 1.1;
+}
+
+.brand-sub{
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+.brand-name{
+  font-size: 20px;     /* ← NOMBRE GRANDE */
+  color: #9B0000;
+  font-weight: 700;
+}
+
 
 .top-links span{
   margin:0 6px;
