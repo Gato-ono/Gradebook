@@ -4,8 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gradebook</title>
-
-  <!-- no pongas nada después del href -->
   <link rel="stylesheet" href="./styles.css?v=99">
 </head>
 
@@ -20,7 +18,7 @@
           <div class="brand-name">MARIANGEL</div>
         </div>
       </div>
-      
+
       <div class="top-links">
         <a href="#">My Account</a>
         <a href="#">Contact Us</a>
@@ -34,70 +32,61 @@
     <h1>Gradebook</h1>
 
     <div class="missing">
-  <span class="title">Missing Assignments</span>
-  <a href="#">(Show All)</a><br>
-  <b>MARIANGEL</b> has <b>0</b> missing assignments.
-      
-        <div class="due-list">
-    <div class="due-item">
-      <span class="due-label">Due:</span>
-      <span class="due-date">02/04/2026</span>
-      <a href="#" class="due-link">Trading Card</a>,
-      <span class="due-course">US HISTORY</span>
-      <span class="due-meta">(Period 5)</span>
-      <span class="due-teacher">ANDERSON, C</span>
-    </div>
+      <span class="title">Missing Assignments</span>
+      <a href="#">(Show All)</a><br>
 
-    <div class="due-item indent">
-      <span class="due-date">01/27/2026</span>
-      <a href="#" class="due-link">
-        Firsthand Accounts of the Great Depression
-      </a>,
-      <span class="due-course">US HISTORY</span>
-      <span class="due-meta">(Period 5)</span>
-      <span class="due-teacher">ANDERSON, C</span>
-    </div>
-  </div>
-</div>
+      <b>MARIANGEL</b> has <b>0</b> missing assignments.
 
-</div>
+      <!-- SOLO ESTO ES LO NUEVO: el Due debajo -->
+      <div class="due-list">
+        <div class="due-item">
+          <span class="due-label">Due:</span>
+          <span class="due-date">02/04/2026</span>
+          <a href="#" class="due-link">Trading Card</a>,
+          <span class="due-course">US HISTORY</span>
+          <span class="due-meta">(Period 5)</span>
+          <span class="due-teacher">ANDERSON, C</span>
+        </div>
+
+        <div class="due-item indent">
+          <span class="due-date">01/27/2026</span>
+          <a href="#" class="due-link">Firsthand Accounts of the Great Depression</a>,
+          <span class="due-course">US HISTORY</span>
+          <span class="due-meta">(Period 5)</span>
+          <span class="due-teacher">ANDERSON, C</span>
+        </div>
+      </div>
+    </div>
 
     <h2 class="section-title">Class Grades</h2>
 
-<!-- CUADRO APARTE (pegado a la tabla) -->
-<div class="grades-subbar">
-  <div class="grades-subbar-left">
-    <span class="student">MARIANGEL (COPPER HILLS HIGH)</span>
-  </div>
+    <!-- CUADRO APARTE (pegado a la tabla) -->
+    <div class="grades-subbar">
+      <div class="grades-subbar-left">
+        <span class="student">MARIANGEL (COPPER HILLS HIGH)</span>
+      </div>
 
-  <div class="grades-subbar-right">
-    <a class="gsb-link" href="#">Display Options</a>
-    <span class="gsb-sep">|</span>
-    <a class="gsb-link" href="#">GPA</a>
-  </div>
-</div>
+      <div class="grades-subbar-right">
+        <a class="gsb-link" href="#">Display Options</a>
+        <span class="gsb-sep">|</span>
+        <a class="gsb-link" href="#">GPA</a>
+      </div>
+    </div>
 
-<div class="grades-divider"></div>
+    <div class="grades-divider"></div>
 
-<table class="grades">
+    <table class="grades">
       <thead>
         <tr>
           <th>Class</th>
           <th>Q1</th>
           <th>Q2</th>
-          <!-- el header Q3 es suave como en el portal -->
           <th class="q3h">Q3</th>
           <th>Q4</th>
         </tr>
       </thead>
 
       <tbody>
-        <!-- PATRÓN REAL (11 filas):
-             fila:  0   1    2   3    4   5   6   7   8   9   10
-             Q3:   SI  NO   SI  NO   SI  SI  SI  SI  SI  SI  SI
-        -->
-
-        <!-- 0 SI -->
         <tr>
           <td class="cls">
             <span class="blue">WOMEN'S WEIGHT TRAINING 1</span><br>
@@ -109,7 +98,6 @@
           <td></td>
         </tr>
 
-        <!-- 1 NO -->
         <tr>
           <td class="cls">
             <span class="blue">CARES - STUDENT ADVISORY</span><br>
@@ -121,7 +109,6 @@
           <td></td>
         </tr>
 
-        <!-- 2 SI -->
         <tr>
           <td class="cls">
             <span class="blue">LANGUAGE ARTS 11</span><br>
@@ -133,7 +120,6 @@
           <td></td>
         </tr>
 
-        <!-- 3 NO -->
         <tr>
           <td class="cls">
             <span class="blue">ATTENDANCE AIDE</span><br>
@@ -145,7 +131,6 @@
           <td></td>
         </tr>
 
-        <!-- 4 SI (OJO: esta era una de las que tú tenías mal) -->
         <tr>
           <td class="cls">
             <span class="blue">FINANCIAL LITERACY</span><br>
@@ -157,7 +142,6 @@
           <td></td>
         </tr>
 
-        <!-- 5 SI -->
         <tr>
           <td class="cls">
             <span class="blue">FUND VOLLEYBALL 1</span><br>
@@ -169,7 +153,6 @@
           <td></td>
         </tr>
 
-        <!-- 6 SI (OJO: esta era otra que tú tenías mal) -->
         <tr>
           <td class="cls">
             <span class="blue">FUND VOLLEYBALL 2</span><br>
@@ -181,7 +164,6 @@
           <td></td>
         </tr>
 
-        <!-- 7 SI -->
         <tr>
           <td class="cls">
             <span class="blue">US HISTORY</span><br>
@@ -193,7 +175,6 @@
           <td></td>
         </tr>
 
-        <!-- 8 SI -->
         <tr>
           <td class="cls">
             <span class="blue">SECONDARY MATH 3</span><br>
@@ -205,7 +186,6 @@
           <td></td>
         </tr>
 
-        <!-- 9 SI -->
         <tr>
           <td class="cls">
             <span class="blue">MED ANATOMY/PHYS</span><br>
@@ -217,7 +197,6 @@
           <td></td>
         </tr>
 
-        <!-- 10 SI -->
         <tr>
           <td class="cls">
             <span class="blue">ENG LANG DEV LEVEL 2</span><br>
@@ -228,10 +207,9 @@
           <td class="q3 q3-strong">A</td>
           <td></td>
         </tr>
-
       </tbody>
     </table>
-  </div>
 
+  </div>
 </body>
-  </html>
+</html>
