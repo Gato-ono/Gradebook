@@ -340,9 +340,9 @@ body{
 /* ===== Header 2 columnas ===== */
 .topgrid{
   display:flex;
-  justify-content:space-between;
   align-items:flex-start;
-  gap:20px;
+  justify-content:flex-start; /* ya no space-between */
+  gap: 28px;                  /* controla la distancia */
 }
 
 .left{
