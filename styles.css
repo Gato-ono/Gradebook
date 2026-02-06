@@ -300,3 +300,16 @@ body{
   color: #0b3aa4;
   margin-top: 2px;
 }
+
+/* ===== Header Skyward corregido ===== */
+.brand-name.full-name{
+  color:#9B0000;
+  font-weight:700;
+  font-size:16px;
+  line-height:1.2;
+}
+
+.top-links span{
+  margin:0 6px;
+  color:#333;
+}
