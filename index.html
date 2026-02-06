@@ -1,76 +1,226 @@
-<!-- 1 -->
-<td class="cls">
-  <div class="class-title">WOMEN'S WEIGHT TRAINING 1</div>
-  <div class="class-meta">Period 1 (7:35 AM - 9:05 AM)</div>
-  <div class="class-teacher">ANDERSEN, K</div>
-</td>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gradebook</title>
+  <link rel="stylesheet" href="./styles.css?v=99">
+</head>
 
-<!-- 2 -->
-<td class="cls">
-  <div class="class-title">CARES - STUDENT ADVISORY</div>
-  <div class="class-meta">Period 1 (7:35 AM - 9:05 AM)</div>
-  <div class="class-teacher">KUHLMEIER, RACHEL</div>
-</td>
+<body>
 
-<!-- 3 -->
-<td class="cls">
-  <div class="class-title">LANGUAGE ARTS 11</div>
-  <div class="class-meta">Period 2 (9:10 AM - 10:40 AM)</div>
-  <div class="class-teacher">Cowart, Kimberly</div>
-</td>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">
+        <div class="avatar">SK</div>
+        <div class="brand-text">
+          <div class="brand-sub">Student Access</div>
+          <div class="brand-name">MARIANGEL</div>
+        </div>
+      </div>
 
-<!-- 4 -->
-<td class="cls">
-  <div class="class-title">ATTENDANCE AIDE</div>
-  <div class="class-meta">Period 3 (10:45 AM - 12:50 PM)</div>
-  <div class="class-teacher">KRISTIE MIDGLEY</div>
-</td>
+      <div class="top-links">
+        <a href="#">My Account</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Email History</a>
+        <a href="#">Exit</a>
+      </div>
+    </div>
+  </header>
 
-<!-- 5 -->
-<td class="cls">
-  <div class="class-title">FINANCIAL LITERACY</div>
-  <div class="class-meta">Period 3A (11:20 AM - 12:50 PM)</div>
-  <div class="class-teacher">LYON, SHANE</div>
-</td>
+  <div class="page">
+    <h1>Gradebook</h1>
 
-<!-- 6 -->
-<td class="cls">
-  <div class="class-title">FUND VOLLEYBALL 1</div>
-  <div class="class-meta">Period 4 (12:55 PM - 2:25 PM)</div>
-  <div class="class-teacher">MOURA, EDDIE</div>
-</td>
+    <div class="missing">
+      <span class="title">Missing Assignments</span>
+      <a href="#">(Show All)</a><br>
 
-<!-- 7 -->
-<td class="cls">
-  <div class="class-title">FUND VOLLEYBALL 2</div>
-  <div class="class-meta">Period 4 (12:55 PM - 2:25 PM)</div>
-  <div class="class-teacher">MOURA, EDDIE</div>
-</td>
+      <b>MARIANGEL</b> has <b>0</b> missing assignments.
 
-<!-- 8 -->
-<td class="cls">
-  <div class="class-title">US HISTORY</div>
-  <div class="class-meta">Period 5 (7:35 AM - 9:05 AM)</div>
-  <div class="class-teacher">ANDERSON, C</div>
-</td>
+      <!-- SOLO ESTO ES LO NUEVO: el Due debajo -->
+      <div class="due-list">
+        <div class="due-item">
+          <span class="due-label">Due:</span>
+          <span class="due-date">02/04/2026</span>
+          <a href="#" class="due-link">Trading Card</a>,
+          <span class="due-course">US HISTORY</span>
+          <span class="due-meta">(Period 5)</span>
+          <span class="due-teacher">ANDERSON, C</span>
+        </div>
 
-<!-- 9 -->
-<td class="cls">
-  <div class="class-title">SECONDARY MATH 3</div>
-  <div class="class-meta">Period 6 (9:10 AM - 10:40 AM)</div>
-  <div class="class-teacher">Mr. HILTON</div>
-</td>
+        <div class="due-item indent">
+          <span class="due-date">01/27/2026</span>
+          <a href="#" class="due-link">Firsthand Accounts of the Great Depression</a>,
+          <span class="due-course">US HISTORY</span>
+          <span class="due-meta">(Period 5)</span>
+          <span class="due-teacher">ANDERSON, C</span>
+        </div>
+      </div>
+    </div>
 
-<!-- 10 -->
-<td class="cls">
-  <div class="class-title">MED ANATOMY/PHYS</div>
-  <div class="class-meta">Period 7A (11:20 AM - 12:50 PM)</div>
-  <div class="class-teacher">Mrs. JENKINS</div>
-</td>
+    <h2 class="section-title">Class Grades 🖨️</h2>
 
-<!-- 11 -->
-<td class="cls">
-  <div class="class-title">ENG LANG DEV LEVEL 2</div>
-  <div class="class-meta">Period 8 (12:55 PM - 2:25 PM)</div>
-  <div class="class-teacher">THOMAS, AMANDA</div>
-</td>
+    <!-- CUADRO APARTE (pegado a la tabla) -->
+    <div class="grades-subbar">
+      <div class="grades-subbar-left">
+        <span class="student">MARIANGEL (COPPER HILLS HIGH)</span>
+      </div>
+
+      <div class="grades-subbar-right">
+        <a class="gsb-link" href="#">Display Options</a>
+        <span class="gsb-sep">|</span>
+        <a class="gsb-link" href="#">GPA</a>
+      </div>
+    </div>
+
+    <div class="grades-divider"></div>
+
+    <table class="grades">
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Q1</th>
+          <th>Q2</th>
+          <th class="q3h">Q3</th>
+          <th>Q4</th>
+        </tr>
+      </thead>
+
+      <tbody>
+  <tr>
+    <td class="cls">
+      <div class="class-title">WOMEN'S WEIGHT TRAINING 1</div>
+      <div class="class-meta">Period 1 (7:35 AM - 9:05 AM)</div>
+      <div class="class-teacher">ANDERSEN, K</div>
+    </td>
+    <td class="blue">B+</td>
+    <td>A</td>
+    <td class="q3 q3-none"></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td class="cls">
+      <div class="class-title">CARES - STUDENT ADVISORY</div>
+      <div class="class-meta">Period 1 (7:35 AM - 9:05 AM)</div>
+      <div class="class-teacher">KUHLMEIER, RACHEL</div>
+    </td>
+    <td></td>
+    <td></td>
+    <td class="q3 q3-soft"></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td class="cls">
+      <div class="class-title">LANGUAGE ARTS 11</div>
+      <div class="class-meta">Period 2 (9:10 AM - 10:40 AM)</div>
+      <div class="class-teacher">Cowart, Kimberly</div>
+    </td>
+    <td>D+</td>
+    <td class="blue">D+</td>
+    <td class="q3 q3-strong">A-</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td class="cls">
+      <div class="class-title">ATTENDANCE AIDE</div>
+      <div class="class-meta">Period 3 (10:45 AM - 12:50 PM)</div>
+      <div class="class-teacher">KRISTIE MIDGLEY</div>
+    </td>
+    <td class="blue">P</td>
+    <td class="blue">P</td>
+    <td class="q3 q3-none"></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td class="cls">
+      <div class="class-title">FINANCIAL LITERACY</div>
+      <div class="class-meta">Period 3A (11:20 AM - 12:50 PM)</div>
+      <div class="class-teacher">LYON, SHANE</div>
+    </td>
+    <td></td>
+    <td></td>
+    <td class="q3 q3-strong"></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td class="cls">
+      <div class="class-title">FUND VOLLEYBALL 1</div>
+      <div class="class-meta">Period 4 (12:55 PM - 2:25 PM)</div>
+      <div class="class-teacher">MOURA, EDDIE</div>
+    </td>
+    <td>A-</td>
+    <td>A</td>
+    <td class="q3 q3-none"></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td class="cls">
+      <div class="class-title">FUND VOLLEYBALL 2</div>
+      <div class="class-meta">Period 4 (12:55 PM - 2:25 PM)</div>
+      <div class="class-teacher">MOURA, EDDIE</div>
+    </td>
+    <td></td>
+    <td></td>
+    <td class="q3 q3-strong">A</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td class="cls">
+      <div class="class-title">US HISTORY</div>
+      <div class="class-meta">Period 5 (7:35 AM - 9:05 AM)</div>
+      <div class="class-teacher">ANDERSON, C</div>
+    </td>
+    <td>F</td>
+    <td>F</td>
+    <td class="q3 q3-soft">B</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td class="cls">
+      <div class="class-title">SECONDARY MATH 3</div>
+      <div class="class-meta">Period 6 (9:10 AM - 10:40 AM)</div>
+      <div class="class-teacher">Mr. HILTON</div>
+    </td>
+    <td>D</td>
+    <td>C-</td>
+    <td class="q3 q3-strong">B+</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td class="cls">
+      <div class="class-title">MED ANATOMY/PHYS</div>
+      <div class="class-meta">Period 7A (11:20 AM - 12:50 PM)</div>
+      <div class="class-teacher">Mrs. JENKINS</div>
+    </td>
+    <td>A-</td>
+    <td>C+</td>
+    <td class="q3 q3-soft">B</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td class="cls">
+      <div class="class-title">ENG LANG DEV LEVEL 2</div>
+      <div class="class-meta">Period 8 (12:55 PM - 2:25 PM)</div>
+      <div class="class-teacher">THOMAS, AMANDA</div>
+    </td>
+    <td>C-</td>
+    <td>B</td>
+    <td class="q3 q3-strong">A</td>
+    <td></td>
+  </tr>
+</tbody>
+    </table>
+
+  </div>
+</body>
+</html>
